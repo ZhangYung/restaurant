@@ -20,7 +20,7 @@
  		die('create error:' . mysqli_error($conn));
   	}
 
-  	echo "create successful \n";
+  	echo "create success  \n";
   	mysqli_close($conn);
  ?>
 <h1>我的第一个标题</h1>
