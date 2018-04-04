@@ -5,7 +5,7 @@
 <title>restaurant</title>
 </head>
 <body>
-<?php
+<!-- ?php
 	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpass = 'ZhangYaoYuan@529143'
@@ -22,7 +22,7 @@
 
   	echo "create success  \n";
   	mysqli_close($conn);
- ?>
+ ? -->
 <h1>我的第一个标题</h1>
 <p>我的第一个段落。</p>
 
