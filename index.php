@@ -6,10 +6,10 @@
 </head>
 <body>
 <?php
-	$name = "runoob"
-	$a = <<<EOF
-		"adb"$name
-		"1223"
+$name = "runoob";
+$a = <<<EOF
+	"adb"$name
+	"1223"
 EOF;
 echo $a;
  ?>
