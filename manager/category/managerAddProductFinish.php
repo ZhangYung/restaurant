@@ -5,8 +5,8 @@
 
 </head>
 <?php 
-	require $_SERVER['DOCUMENT_ROOT'] . "restaurantConfig/config.php";
-	echo $_SERVER['DOCUMENT_ROOT'] . "restaurantConfig/config.php";
+	echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
+	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	echo "<br>";
 	echo $mysqlServer;
 	echo $mysqlUsername;
