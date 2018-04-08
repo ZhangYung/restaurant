@@ -9,7 +9,7 @@
     border-bottom: .05em solid #DCDCDC
 }
 
-.mui-segmented-control .mui-control-item.mui-active {
+/*.mui-segmented-control .mui-control-item.mui-active {
     color: #fff;
     background-color: #007aff
 }
@@ -30,7 +30,7 @@
 .mui-segmented-control-positive .mui-control-item.mui-active {
     color: #fff;
     background-color: #4cd964
-}
+*/}
 
 .mui-segmented-control-positive.mui-segmented-control-inverted .mui-control-item.mui-active {
     color: #4cd964;
