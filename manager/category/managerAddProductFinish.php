@@ -5,15 +5,35 @@
 
 </head>
 <?php 
-	echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
-	echo "<br>";
+	$fileFoldPath = $_SERVER['DOCUMENT_ROOT'] . "/restaurant/uploadProductImage/"
+
+//连接mysql
+	$conn = mysql_connect($mysqlServer, $mysqlUsername, $mysqlPassword);
+	if (!$conn) {
+		die("数据库连接失败，请联系管理员。");
+	}
+
+	$databaseName = "meimeishop";
+	$result = $conn->query("show tables like '" . $databaseName . "'");
+	$row = $result->fetchAll();
+	if (count($row) < '1') {
+	//创建数据库
+		if ($conn->query("create database " . $databaseName) === TRUE) {
+			echo "创建数据库"
+		 } else {
+		 	echo "创建数据库失败"
+		 }
+	}
+
+
 	echo $mysqlServer;
 	echo $mysqlUsername;
 	echo $mysqlPassword;
 	echo $_POST["titleName"];
 	echo $_POST["price"];
 	echo $_POST["addType"];
+
 
 
  ?>
