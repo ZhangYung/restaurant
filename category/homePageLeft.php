@@ -5,9 +5,9 @@
 </head>
 <body>
 	<br><br>
-	<a class="homePageSelectTitle" href="category/fastFood.php" target="mainContent"> 美味快餐 </a><br><br>
-	<a class="homePageSelectTitle" href="category/hotPot.php" target="mainContent"> 火锅 </a><br><br>
-	<a class="homePageSelectTitle" href="category/drinks.php" target="mainContent"> 饮料 </a><br><br>
-	<a class="homePageSelectTitle" href="category/others.php" target="mainContent"> 其他 </a>
+	<a class="homePageSelectTitle" href="fastFood.php" target="mainContent"> 美味快餐 </a><br><br>
+	<a class="homePageSelectTitle" href="hotPot.php" target="mainContent"> 火锅 </a><br><br>
+	<a class="homePageSelectTitle" href="drinks.php" target="mainContent"> 饮料 </a><br><br>
+	<a class="homePageSelectTitle" href="others.php" target="mainContent"> 其他 </a>
 </body>
 </html>
