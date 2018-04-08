@@ -20,19 +20,19 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	}
 
 	echo "判断数据库是否存在pre";
-	$databaseName = "meimeishop";
-	$result = $conn->query("show databases like '" . $databaseName . "'");
-	$row = $result->fetchAll();
-	echo "判断数据库是否存在";
-	echo $row;
-	if (count($row) < '1') {
-	//创建数据库
-		if ($conn->query("create database " . $databaseName) === TRUE) {
-			echo "创建数据库";
-		 } else {
-		 	echo "创建数据库失败";
-		 }
-	}
+	// $databaseName = "meimeishop";
+	// $result = $conn->query("show databases like '" . $databaseName . "'");
+	// $row = $result->fetchAll();
+	// echo "判断数据库是否存在";
+	// echo $row;
+	// if (count($row) < '1') {
+	// //创建数据库
+	// 	if ($conn->query("create database " . $databaseName) === TRUE) {
+	// 		echo "创建数据库";
+	// 	 } else {
+	// 	 	echo "创建数据库失败";
+	// 	 }
+	// }
 
  ?>
 <body>
