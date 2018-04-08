@@ -6,6 +6,7 @@
 </head>
 <?php 
 //config.php  数据库登录配置，就不共享出来了。
+echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	$fileFoldPath = $_SERVER['DOCUMENT_ROOT'] . "/restaurant/uploadProductImage/"
 
