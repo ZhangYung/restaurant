@@ -8,8 +8,8 @@
 <body>
 
 <frameset cols="20%, *">
-	<frame name="selectContent" src="homePageLeft.php" noresize="noresize"></frame>
-	<frame name="mainContent" src="fastFood.php"></frame>
+	<frame name="selectContent" src="category/homePageLeft.php" noresize="noresize"></frame>
+	<frame name="mainContent" src="category/fastFood.php"></frame>
 </frameset>
 
 
