@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="StyleSheet/homepage.css" />
-<title>restaurant</title>
+<title>水云居</title>
 </head>
 
 <frameset cols="20%, *" frameBorder="1">
