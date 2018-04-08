@@ -5,7 +5,7 @@
 </head>
 <?php 
 	$addType = $_GET["addType"];
-	echo addType;
+	echo $addType;
  ?>
 <body>
 <h1>addProduct</h1>
