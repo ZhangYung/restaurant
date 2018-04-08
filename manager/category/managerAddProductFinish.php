@@ -6,13 +6,13 @@
 </head>
 <?php 
 //config.php  数据库登录配置，就不共享出来了。
-echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . <br>; 
+echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>"; 
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	$fileFoldPath = $_SERVER['DOCUMENT_ROOT'] . "/restaurant/uploadProductImage/";
-	echo $fileFoldPath . <br>;
-	echo $mysqlServer . <br>;
-	echo $mysqlUsername . <br>;
-	echo $mysqlPassword . <br>;
+	echo $fileFoldPath . "<br>";
+	echo $mysqlServer . "<br>";
+	echo $mysqlUsername . "<br>";
+	echo $mysqlPassword . "<br>";
 //连接mysql  请自行配置数据库$mysqlServer, $mysqlUsername, $mysqlPassword
 	// $conn = mysql_connect($mysqlServer, $mysqlUsername, $mysqlPassword);
 	// if (!$conn) {
