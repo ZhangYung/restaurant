@@ -2,11 +2,19 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomePage.css">
+
 </head>
 <?php 
+require _DIR_ . "../restaurantConfig/config.php";
+
+	echo _DIR_ . "../restaurantConfig/config.php";
+	echo $mysqlServer;
+	echo $mysqlUsername;
+	echo $mysqlPassword;
 	echo $_POST["titleName"];
 	echo $_POST["price"];
 	echo $_POST["addType"];
+
 
  ?>
 <body>
