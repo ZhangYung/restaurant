@@ -7,7 +7,7 @@
 <?php 
 // require _DIR_ . "../restaurantConfig/config.php";
 
-	echo _DIR_ . "../restaurantConfig/config.php";
+	echo $_SERVER['DOCUMENT_ROOT'] . "../restaurantConfig/config.php";
 	echo $mysqlServer;
 	echo $mysqlUsername;
 	echo $mysqlPassword;
