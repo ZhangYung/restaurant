@@ -9,7 +9,7 @@
  echo "file";
 ?>  
 
-<div class="mui-content shortcut"> 
+<div class="mui-content shortcut" id="segmentedControl" ng-class="{tabFixed:showFixed}"> 
 	<a class="mui-control-item mui-active" ng-class="{'mui-active':lastTab===0}" data-tab="0">日用品</a>
 	<a class="mui-control-item" ng-class="{'mui-active':lastTab===1" data-tab="1">生活用品</a>
 	<a class="mui-control-item" ng-class="{'mui-active':lastTab===2" data-tab="2">数码产品</a>
