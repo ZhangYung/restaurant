@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="StyleSheet/homepage.css" />
 <title>restaurant</title>
 </head>
 <body>
@@ -25,42 +26,4 @@
 </html>
 
 
-.shortcut a.mui-control-item {
-    border: none;
-    background-color: #fff
-    font-size: .33rem;
-    color: #000;
-    height: .86rem;
-    line-height: .86rem;
-    border-bottom: .05em solid #DCDCDC
-}
-
-.mui-segmented-control .mui-control-item.mui-active {
-    color: #fff;
-    background-color: #007aff
-}
-
-.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item,
-.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active {
-    border-bottom: 1px solid #c8c7cc
-}
-
-
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-    color: #007aff;
-    border-bottom: 2px solid #007aff;
-    background: 0 0
-}
-
-
-.mui-segmented-control-positive .mui-control-item.mui-active {
-    color: #fff;
-    background-color: #4cd964
-}
-
-.mui-segmented-control-positive.mui-segmented-control-inverted .mui-control-item.mui-active {
-    color: #4cd964;
-    border-bottom: 2px solid #4cd964;
-    background: 0 0
-}
 
