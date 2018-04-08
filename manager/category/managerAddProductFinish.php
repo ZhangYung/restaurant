@@ -13,10 +13,10 @@
 	echo $mysqlUsername;
 	echo $mysqlPassword;
 //连接mysql  请自行配置数据库$mysqlServer, $mysqlUsername, $mysqlPassword
-	$conn = mysql_connect($mysqlServer, $mysqlUsername, $mysqlPassword);
-	if (!$conn) {
-		die("数据库连接失败，请联系管理员。");
-	}
+	// $conn = mysql_connect($mysqlServer, $mysqlUsername, $mysqlPassword);
+	// if (!$conn) {
+	// 	die("数据库连接失败，请联系管理员。");
+	// }
 
 	echo "判断数据库是否存在pre";
 	// $databaseName = "meimeishop";
