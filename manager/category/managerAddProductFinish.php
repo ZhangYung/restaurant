@@ -5,7 +5,7 @@
 
 </head>
 <?php 
-require _DIR_ . "../restaurantConfig/config.php";
+// require _DIR_ . "../restaurantConfig/config.php";
 
 	echo _DIR_ . "../restaurantConfig/config.php";
 	echo $mysqlServer;
