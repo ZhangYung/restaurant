@@ -25,6 +25,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	$sql = "show databases like '" . $databaseName . "';";
 	echo $sql . "<br>";
 	$result = $conn->query(sql);
+	echo "判断是否存在数据库";
 	$row = $result->fetch_array();
 	echo "row:" . count($row);
 	// $rstArray = result->fetch_array();
