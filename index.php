@@ -26,18 +26,19 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	echo $sql . "<br>";
 	$result = $conn->query(sql);
 	$row = $result->fetch_row();
+	echo count($row)
 	println($row[0]);
 	// $rstArray = result->fetch_array();
 	// echo "获取是否存在" . "<br>";
 	// // echo $row;
-	// if ($rstArray['total'] == 0) {
-	// //创建数据库
-	// 	if ($conn->query("create database " . $databaseName) === TRUE) {
-	// 		echo "创建数据库" . "<br>";
-	// 	 } else {
-	// 	 	echo "创建数据库失败" . "<br>";
-	// 	 }
-	// }
+	if (count($row) == '0') {
+	//创建数据库
+		if ($conn->query("create database " . $databaseName) === TRUE) {
+			echo "创建数据库" . "<br>";
+		 } else {
+		 	echo "创建数据库失败" . "<br>";
+		 }
+	}
 
 	$conn->close();
  ?>
