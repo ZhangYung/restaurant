@@ -6,46 +6,14 @@
 <title>水云居</title>
 </head>
 <body>
+
 <?php 
-//config.php  数据库登录配置，就不共享出来了。
-echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>"; 
-	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
-	$fileFoldPath = $_SERVER['DOCUMENT_ROOT'] . "/restaurant/uploadProductImage/";
-	echo $fileFoldPath . "<br>";
-	echo $mysqlServer . "<br>";
-	echo $mysqlUsername . "<br>";
-	echo $mysqlPassword . "<br>";
-//连接mysql  请自行配置数据库$mysqlServer, $mysqlUsername, $mysqlPassword
-	$conn = new mysqli($mysqlServer, $mysqlUsername, $mysqlPassword);
-	if ($conn->connect_error) {
-		die("数据库连接失败，请联系管理员。");
-	}
+require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
+require $databaseManagerphpPath;
+checkAndCreateTable($meimeiShopOrderTable);
+checkAndCreateTable($meimeiShopProductTable);
 
-	var_dump($conn);
-	$databaseName = "meimeishopTest";
-	$sql = "show databases like '" . $databaseName . "'";
-	echo $sql . "<br>";
-	$result = $conn->query($sql);
-	var_dump($result);
-	echo "<br>row:";
-	$row = $result->fetch_row();
-	var_dump($row);
-	echo "<br>count:";
-	$count = count($row);
-	var_dump($count);
-	var_dump(count($result->fetch_row()));
-
-	if ($count == 0) {
-	//创建数据库
-		if ($conn->query("create database " . $databaseName) === TRUE) {
-			echo "创建数据库" . "<br>";
-		 } else {
-		 	echo "创建数据库失败" . "<br>";
-		 }
-	}
-	echo "数据库完成";
-	$conn->close();
- ?>
+?>
 
 <frameset cols="20%, *" frameBorder="1">
 	<frame name="selectContent" src="category/homePageLeft.php" noresize="noresize"></frame>
