@@ -21,11 +21,13 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 		die("数据库连接失败，请联系管理员。");
 	}
 
+	var_dump($conn);
 	$databaseName = "meimeishopTest";
 	$sql = "show databases like '" . $databaseName . "';";
 	echo $sql . "<br>";
 	$result = $conn->query(sql);
 	echo "判断是否存在数据库";
+	var_dump($result);
 	$row = $result->fetch_array();
 	echo "row:";
 	echo count($row);
