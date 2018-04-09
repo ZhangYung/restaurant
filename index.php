@@ -15,7 +15,7 @@ echo $databaseManagerphpPath;
 checkAndCreateTable($meimeiShopOrderTable);
 checkAndCreateTable($meimeiShopProductTable);
 
-addOrEditProduct(NULL, "炒饭", 10.50, "http://baidu.com/dad.png", "很好吃的黄金炒饭", 999, 1, 1);
+addOrEditProduct(1523269980, "炒饭1", 11.50, "http://baidu.com/dadsad.png", "换dss炒饭", 9999, 2, 2);
 
 ?>
 
