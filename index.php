@@ -29,27 +29,16 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	var_dump($result);
 	echo "<br>row:";
 	var_dump($result->fetch_row());
-	
-	// echo "判断创建数据库"
-	// if ($result->num_rows() == 0) {
-	// //创建数据库
-	// 	if ($conn->query("create database " . $databaseName) === TRUE) {
-	// 		echo "创建数据库" . "<br>";
-	// 	 } else {
-	// 	 	echo "创建数据库失败" . "<br>";
-	// 	 }
-	// }
-	// $row = $result->fetch_array();
-	// echo "row:";
-	// echo count($row);
-	// if (count($row) == '0') {
-	// //创建数据库
-	// 	if ($conn->query("create database " . $databaseName) === TRUE) {
-	// 		echo "创建数据库" . "<br>";
-	// 	 } else {
-	// 	 	echo "创建数据库失败" . "<br>";
-	// 	 }
-	// }
+	count($result->fetch_row());
+
+	if ($result->fetch_row() == 0) {
+	//创建数据库
+		if ($conn->query("create database " . $databaseName) === TRUE) {
+			echo "创建数据库" . "<br>";
+		 } else {
+		 	echo "创建数据库失败" . "<br>";
+		 }
+	}
 	echo "数据库完成";
 	$conn->close();
  ?>
