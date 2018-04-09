@@ -26,8 +26,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	echo $sql . "<br>";
 	$result = $conn->query(sql);
 	$row = $result->fetch_row();
-	echo count($row);
-	println($row[0]);
+	echo "row:" . count($row);
 	// $rstArray = result->fetch_array();
 	// echo "获取是否存在" . "<br>";
 	// // echo $row;
@@ -39,7 +38,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 		 	echo "创建数据库失败" . "<br>";
 		 }
 	}
-
+	echo "数据库完成";
 	$conn->close();
  ?>
 
