@@ -16,7 +16,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	echo $mysqlUsername . "<br>";
 	echo $mysqlPassword . "<br>";
 //连接mysql  请自行配置数据库$mysqlServer, $mysqlUsername, $mysqlPassword
-	$conn = mysql_connect("localhost", "root", "admin");
+	$conn = new mysqli("localhost", "root", "admin");
 	if (!$conn) {
 		echo "失败";
 		die("数据库连接失败，请联系管理员。");
