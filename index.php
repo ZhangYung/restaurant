@@ -12,6 +12,7 @@ require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
 echo $databaseManagerphpPath;
 
+checkAndCreateDatabase($meimeiShopDatabaseName);
 checkAndCreateTable($meimeiShopOrderTable);
 checkAndCreateTable($meimeiShopProductTable);
 
