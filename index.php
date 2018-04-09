@@ -23,7 +23,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 
 	$databaseName = "meimeishopTest";
 	$sql = "show databases like '" . $databaseName . "'";
-	echo sql;
+	echo $sql;
 	$result = $conn->query(sql);
 	$row = $result->fetchAll();
 	echo "判断数据库是否存在";
