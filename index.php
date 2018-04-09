@@ -26,8 +26,10 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	$sql = "show databases like '" . $databaseName . "'";
 	echo $sql . "<br>";
 	$result = $conn->query($sql);
-	echo "判断是否存在数据库" . "<br>";
 	var_dump($result);
+	echo "<br>row:"
+	var_dump($result->num_rows());
+	echo "判断创建数据库"
 	if ($result->num_rows() == 0) {
 	//创建数据库
 		if ($conn->query("create database " . $databaseName) === TRUE) {
