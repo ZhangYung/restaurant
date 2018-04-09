@@ -12,7 +12,10 @@ require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
 echo $databaseManagerphpPath;
 
-addOrEditProduct("1", "炒饭", 10.50, "http://baidu.com/dad.png", "很好吃的黄金炒饭", 999, 0, 0);
+checkAndCreateTable($meimeiShopOrderTable);
+checkAndCreateTable($meimeiShopProductTable);
+
+addOrEditProduct(1, "炒饭", 10.50, "http://baidu.com/dad.png", "很好吃的黄金炒饭", 999, 0, 0);
 
 ?>
 
