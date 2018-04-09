@@ -29,6 +29,8 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	var_dump($result);
 	echo "<br>row:";
 	var_dump($result->fetch_row());
+	echo "<br>count:";
+	var_dump(count($result->fetch_row());
 
 	if (count($result->fetch_row()) == 0) {
 	//创建数据库
