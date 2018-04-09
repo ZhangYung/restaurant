@@ -33,7 +33,7 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	echo "<br>count:";
 	$count = count($row);
 	var_dump($count);
-	var_dump(count($row));
+	var_dump(count($result->fetch_row()));
 
 	if ($count == 0) {
 	//创建数据库
