@@ -15,7 +15,8 @@ echo $databaseManagerphpPath;
 checkAndCreateTable($meimeiShopOrderTable);
 checkAndCreateTable($meimeiShopProductTable);
 
-addOrEditProduct(1, "launch", 10.50, "http://baidu.com/dad.png", "good food", 999, 0, 0);
+$timeId = intval(time());
+addOrEditProduct($timeId, "炒饭", 10.50, "http://baidu.com/dad.png", "很好吃的黄金炒饭", 999, 0, 0);
 
 ?>
 
