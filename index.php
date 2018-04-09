@@ -26,8 +26,16 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	$sql = "show databases like '" . $databaseName . "'";
 	echo $sql . "<br>";
 	$result = $conn->query($sql);
-	echo "判断是否存在数据库";
+	echo "判断是否存在数据库" . "<br>";
 	var_dump($result);
+	if ($result->num_rows() == 0) {
+	//创建数据库
+		if ($conn->query("create database " . $databaseName) === TRUE) {
+			echo "创建数据库" . "<br>";
+		 } else {
+		 	echo "创建数据库失败" . "<br>";
+		 }
+	}
 	// $row = $result->fetch_array();
 	// echo "row:";
 	// echo count($row);
