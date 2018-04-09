@@ -26,10 +26,8 @@ echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>";
 	echo $sql;
 	$result = $conn->query(sql);
 	echo "获取是否存在";
-	$row = $result->fetchAll();
-	echo "判断数据库是否存在";
 	// echo $row;
-	if (count($row) < '1') {
+	if ($result->num_rows == 0) {
 	//创建数据库
 		if ($conn->query("create database " . $databaseName) === TRUE) {
 			echo "创建数据库";
