@@ -22,9 +22,10 @@
 				echo "<tr> <br> model:";
 				$model = new shopProduct();
 				echo "create <br>";
-				
-				var_dump($products[$i]);
-				$model->initWithDic($products[$i]);
+
+				$subProduct = $products[$i];
+				var_dump($subProduct["name"]);
+				$model->initWithDic($subProduct);
 
 				echo "<br> create finish <br>";
 				var_dump($model);
