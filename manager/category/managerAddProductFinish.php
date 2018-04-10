@@ -22,16 +22,16 @@
 	$temp = explode(".", $file["name"]);
 	$extension = end($temp);     // 获取文件后缀名
 
-	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
-	if ((($file["type"] == "image/gif")
-	|| ($file["type"] == "image/jpeg")
-	|| ($file["type"] == "image/jpg")
-	|| ($file["type"] == "image/pjpeg")
-	|| ($file["type"] == "image/x-png")
-	|| ($file["type"] == "image/png"))
-	&& ($file["size"] < 307200)   // 小于 200 kb
-	&& in_array($extension, $allowedExts))
-	{
+	// $uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	// if ((($file["type"] == "image/gif")
+	// || ($file["type"] == "image/jpeg")
+	// || ($file["type"] == "image/jpg")
+	// || ($file["type"] == "image/pjpeg")
+	// || ($file["type"] == "image/x-png")
+	// || ($file["type"] == "image/png"))
+	// && ($file["size"] < 307200)   
+	// && in_array($extension, $allowedExts))
+	// {
 	    // if ($file["error"] > 0)
 	    // {
 	    //     echo "上传文件错误：: " . $file["error"] . "<br>";
@@ -49,11 +49,11 @@
 	    //     }
 	    // }
 	    // echo "上传文件成功";
-	}
-	else
-	{
-	    die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
-	}
+	// }
+	// else
+	// {
+	//     die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
+	// }
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
 	// addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
