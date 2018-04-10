@@ -13,7 +13,7 @@
 	$titleName = $_POST["titleName"];
 	$price = $_POST["price"];
 	echo "addType:";
-	echo $titleName;
+	echo $addType;
 
 	// $uploadImageFileFoldPath;
  // 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
