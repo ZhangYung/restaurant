@@ -45,7 +45,7 @@
 	        {
 	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
 	            echo $uploadPath . "创建图片成功";
-	            echo move_uploaded_file($file["tmp_name"], $uploadPath);
+	            var_dump(move_uploaded_file($file["tmp_name"], $uploadPath));
 	            
 	        }
 	    }
