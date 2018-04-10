@@ -14,7 +14,7 @@
 	$detail = $_POST["detail"];
 	$price = $_POST["price"];
 	$number = $_POST["number"];
-	$file = $_POST["file"];
+	$file = $_FILES["file"];
 	var_dump($file);
 
 	// 允许上传的图片后缀
