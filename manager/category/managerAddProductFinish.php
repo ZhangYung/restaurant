@@ -31,23 +31,23 @@
 	|| ($file["type"] == "image/png"))
 	&& ($file["size"] < 307200))
 	{
-	    // if ($file["error"] > 0)
-	    // {
-	    //     echo "上传文件错误：: " . $file["error"] . "<br>";
-	    // }
-	    // else
-	    // {   
-	    //     if (file_exists($uploadPath))
-	    //     {
-	    //         echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
-	    //     }
-	    //     else
-	    //     {
-	    //         // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-	    //         move_uploaded_file($file["tmp_name"], $uploadPath);
-	    //     }
-	    // }
-	    // echo "上传文件成功";
+	    if ($file["error"] > 0)
+	    {
+	        echo "上传文件错误：: " . $file["error"] . "<br>";
+	    }
+	    else
+	    {   
+	        if (file_exists($uploadPath))
+	        {
+	            echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
+	        }
+	        else
+	        {
+	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
+	            move_uploaded_file($file["tmp_name"], $uploadPath);
+	        }
+	    }
+	    echo "上传文件成功";
 	}
 	// else
 	// {
