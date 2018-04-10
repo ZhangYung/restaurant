@@ -6,11 +6,11 @@
 </head>
 <body>
 <?php 
-// $addType = $_POST("addType");
-// $titleName = $_POST("titleName");
-// $price = $_POST("price");
-// echo "addType:";
-// echo $addType;
+$addType = $_POST("addType");
+$titleName = $_POST("titleName");
+$price = $_POST("price");
+echo "addType:";
+echo $addType;
 
 // 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 // 	require $databaseManagerphpPath;
@@ -20,13 +20,13 @@
 // // addOrEditProduct($productId, $name, $price, $imagePath, $detail, $number, $category, $state);
 
 $finishPage = "managerFastFood.php";
-// if ($addType == 2) {
-// 	$finishPage = "managerHotPot.php";
-// } elseif ($addType == 3) {
-// 	$finishPage = "managerDrinks.php";
-// } elseif ($addType == 4) {
-// 	$finishPage = "managerOthers.php";
-// }
+if ($addType == 2) {
+	$finishPage = "managerHotPot.php";
+} elseif ($addType == 3) {
+	$finishPage = "managerDrinks.php";
+} elseif ($addType == 4) {
+	$finishPage = "managerOthers.php";
+}
 
  ?>
 	<p>添加成功</p>
