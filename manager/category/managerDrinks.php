@@ -6,7 +6,7 @@
 <body>
 	<br>
 	<form action="managerAddProduct.php" method="get">
-	<button class="managerAdd" type="submit" name="addType" value="drinks"> 添加 </button> 
+	<button class="managerAdd" type="submit" name="addType" value="3"> 添加 </button> 
 	</form>
 	<br>
 
