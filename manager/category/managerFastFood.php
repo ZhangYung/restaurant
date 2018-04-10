@@ -21,9 +21,12 @@
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr> <br> model:";
 				$model = new shopProduct();
-				echo "create";
+				echo "create <br>";
+				
 				var_dump($products[$i]);
 				$model->initWithDic($products[$i]);
+
+				echo "<br> create finish <br>";
 				var_dump($model);
 
 				echo "end model </tr>";
