@@ -7,10 +7,10 @@
 <body>
 <?php 
 // $addType = $_POST("addType");
-// $titleName = $_POST("titleName");
+$titleName = $_POST("titleName");
 // $price = $_POST("price");
 // echo "addType:";
-// echo $addType;
+echo $titleName;
 
 // 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 // 	require $databaseManagerphpPath;
