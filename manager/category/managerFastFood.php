@@ -19,19 +19,24 @@
 			$count = count($products);
 			echo $count;
 			for ($i=0; $i < $count; $i++) { 
-				echo "<tr> <br> model:";
+				echo "<tr>";
 				$model = new shopProduct();
-				echo "create <br>";
-
 				$subProduct = $products[$i];
-				var_dump($subProduct);
-				var_dump($subProduct["name"]);
 				$model->initWithDic($subProduct);
+				echo "<td>"
+				echo "<img src=" . $model->imagePath . "width=30%"  . "/>";
+				echo "</td>"
 
-				echo "<br> create finish <br>";
-				var_dump($model);
+				echo "<td>"
+				echo "<tr>";
+				echo "<p width=80%> " . $model->name . "</p> <br>"
+				echo "</tr>";
+				echo "<tr>";
+				echo "<p width=80%> " . $model->detail . "</p> <br>"
+				echo "</tr>";
+				echo "</td>"
 
-				echo "end model </tr>";
+				echo " </tr> <br>";
 			}
 			
 		  ?>
