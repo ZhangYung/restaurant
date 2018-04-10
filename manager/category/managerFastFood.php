@@ -24,9 +24,9 @@
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
 				var_dump($model->imagePath);
-				// echo "<td>"
-				// echo "<img src=" . $model->imagePath . "width=30%"  . "/>";
-				// echo "</td>"
+				echo "<td>"
+				echo "<img src=" . $model->imagePath . " width=30%"  . "/>";
+				echo "</td>"
 
 				// echo "<td>"
 				// echo "<tr>";
