@@ -14,9 +14,9 @@
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
-			// $productsJson = getProducts(NULL, 1, NULL);
+			$productsJson = getProducts(NULL, 1, NULL);
 			// $products = json_decode($productsJson);
-			// var_dump($products);
+			var_dump($productsJson);
 		  ?>
 		</tr>
 	</table>
