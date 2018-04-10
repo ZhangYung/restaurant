@@ -23,18 +23,19 @@
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
-				echo "<td>"
-				echo "<img src=" . $model->imagePath . "width=30%"  . "/>";
-				echo "</td>"
+				var_dump($model->imagePath);
+				// echo "<td>"
+				// echo "<img src=" . $model->imagePath . "width=30%"  . "/>";
+				// echo "</td>"
 
-				echo "<td>"
-				echo "<tr>";
-				echo "<p width=80%> " . $model->name . "</p> <br>"
-				echo "</tr>";
-				echo "<tr>";
-				echo "<p width=80%> " . $model->detail . "</p> <br>"
-				echo "</tr>";
-				echo "</td>"
+				// echo "<td>"
+				// echo "<tr>";
+				// echo "<p width=80%> " . $model->name . "</p> <br>"
+				// echo "</tr>";
+				// echo "<tr>";
+				// echo "<p width=80%> " . $model->detail . "</p> <br>"
+				// echo "</tr>";
+				// echo "</td>"
 
 				echo " </tr> <br>";
 			}
