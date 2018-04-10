@@ -7,7 +7,7 @@
 	<br>
 	<form action="managerAddProductFinish.php" method="POST" enctype="multipart/form-data">
 	<input type="hidden" name="addType" value=<?php echo $_GET["addType"];?> >
-	商品图片:(文件要少于200kb) <input type="file" name="image"><br>
+	商品图片:(文件要少于200kb) <input type="file" name="file"><br>
 	商品名称：<input type="text" name="titleName"><br>
 	商品描述：<input type="text" name="detail"><br>
 	商品价格：<input type="number" name="price" step="0.01" min="0.01" max="999999" /><br>
