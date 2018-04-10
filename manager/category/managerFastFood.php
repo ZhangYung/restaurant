@@ -11,15 +11,23 @@
 	</form>
 	<br>
 	<table>
-		<tr>
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$productsJson = getProducts(NULL, 1, NULL);
 			$products = json_decode($productsJson);
-			var_dump($productsJson);
+			var_dump($products);
+			$count = count($products);
+			for ($i=0; $i < $count; $i++) { 
+				echo "<tr>";
+				$model =  new shopProduct();
+				$model->initWithDic($products[$i]);
+				var_dump($model);
+
+				echo "</tr>";
+			}
+			
 		  ?>
-		</tr>
 	</table>
 </body>
 </html>
