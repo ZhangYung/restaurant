@@ -32,23 +32,23 @@
 	&& ($file["size"] < 307200)   // 小于 200 kb
 	&& in_array($extension, $allowedExts))
 	{
-	    if ($file["error"] > 0)
-	    {
-	        echo "上传文件错误：: " . $file["error"] . "<br>";
-	    }
-	    else
-	    {   
-	        if (file_exists($uploadPath))
-	        {
-	            echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
-	        }
-	        else
-	        {
-	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-	            move_uploaded_file($file["tmp_name"], $uploadPath);
-	        }
-	    }
-	    echo "上传文件成功";
+	    // if ($file["error"] > 0)
+	    // {
+	    //     echo "上传文件错误：: " . $file["error"] . "<br>";
+	    // }
+	    // else
+	    // {   
+	    //     if (file_exists($uploadPath))
+	    //     {
+	    //         echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
+	    //     }
+	    //     else
+	    //     {
+	    //         // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
+	    //         move_uploaded_file($file["tmp_name"], $uploadPath);
+	    //     }
+	    // }
+	    // echo "上传文件成功";
 	}
 	else
 	{
@@ -56,7 +56,7 @@
 	}
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-	addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
+	// addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
 
 	$productCategory = "快餐";
 	$finishPage = "managerFastFood.php";
