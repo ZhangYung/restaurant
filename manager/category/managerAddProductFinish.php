@@ -11,11 +11,13 @@
 
 	$addType = $_POST["addType"];
 	$titleName = $_POST["titleName"];
+	$detail = $_POST["detail"];
 	$price = $_POST["price"];
+	$number = $_POST["number"];
 
 	// $uploadImageFileFoldPath;
  // 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-// addOrEditProduct($productId, $name, $price, $imagePath, $detail, $number, $category, $state);
+addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, 1);
 
 $productCategory = "快餐";
 $finishPage = "managerFastFood.php";
