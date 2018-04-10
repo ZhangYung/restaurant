@@ -22,16 +22,15 @@
 	$temp = explode(".", $file["name"]);
 	$extension = end($temp);     // 获取文件后缀名
 
-	// $uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
-	// if ((($file["type"] == "image/gif")
-	// || ($file["type"] == "image/jpeg")
-	// || ($file["type"] == "image/jpg")
-	// || ($file["type"] == "image/pjpeg")
-	// || ($file["type"] == "image/x-png")
-	// || ($file["type"] == "image/png"))
-	// && ($file["size"] < 307200)   
-	// && in_array($extension, $allowedExts))
-	// {
+	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	if ((($file["type"] == "image/gif")
+	|| ($file["type"] == "image/jpeg")
+	|| ($file["type"] == "image/jpg")
+	|| ($file["type"] == "image/pjpeg")
+	|| ($file["type"] == "image/x-png")
+	|| ($file["type"] == "image/png"))
+	&& ($file["size"] < 307200))
+	{
 	    // if ($file["error"] > 0)
 	    // {
 	    //     echo "上传文件错误：: " . $file["error"] . "<br>";
@@ -49,7 +48,7 @@
 	    //     }
 	    // }
 	    // echo "上传文件成功";
-	// }
+	}
 	// else
 	// {
 	//     die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
