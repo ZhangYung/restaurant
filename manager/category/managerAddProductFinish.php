@@ -24,37 +24,37 @@
 
 	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
 	echo $uploadPath;
-	if ((($file["type"] == "image/gif")
-	|| ($file["type"] == "image/jpeg")
-	|| ($file["type"] == "image/jpg")
-	|| ($file["type"] == "image/pjpeg")
-	|| ($file["type"] == "image/x-png")
-	|| ($file["type"] == "image/png"))
-	&& ($file["size"] < 307200)   // 小于 200 kb
-	&& in_array($extension, $allowedExts))
-	{
-	    if ($_FILES["file"]["error"] > 0)
-	    {
-	        echo "上传文件错误：: " . $file["error"] . "<br>";
-	    }
-	    else
-	    {   
-	        if (file_exists($uploadPath))
-	        {
-	            echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
-	        }
-	        else
-	        {
-	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-	            move_uploaded_file($file["tmp_name"], $uploadPath);
-	        }
-	    }
-	    echo "上传文件成功";
-	}
-	else
-	{
-	    die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
-	}
+	// if ((($file["type"] == "image/gif")
+	// || ($file["type"] == "image/jpeg")
+	// || ($file["type"] == "image/jpg")
+	// || ($file["type"] == "image/pjpeg")
+	// || ($file["type"] == "image/x-png")
+	// || ($file["type"] == "image/png"))
+	// && ($file["size"] < 307200)   // 小于 200 kb
+	// && in_array($extension, $allowedExts))
+	// {
+	//     if ($file["error"] > 0)
+	//     {
+	//         echo "上传文件错误：: " . $file["error"] . "<br>";
+	//     }
+	//     else
+	//     {   
+	//         if (file_exists($uploadPath))
+	//         {
+	//             echo $uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员";
+	//         }
+	//         else
+	//         {
+	//             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
+	//             move_uploaded_file($file["tmp_name"], $uploadPath);
+	//         }
+	//     }
+	//     echo "上传文件成功";
+	// }
+	// else
+	// {
+	//     die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
+	// }
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
 	// addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
