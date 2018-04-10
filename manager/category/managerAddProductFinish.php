@@ -6,15 +6,17 @@
 </head>
 <body>
 <?php 
+$addType = $_POST("addType");
+$titleName = $_POST("titleName");
+$price = $_POST("price");
+echo "addType:"
+echo $addType;
+
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	require $databaseManagerphpPath;
 
 	// $uploadImageFileFoldPath;
  // 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-$addType = $_POST("addType");
-$titleName = $_POST("titleName");
-$price = $_POST("price");
-echo $addType;
 // addOrEditProduct($productId, $name, $price, $imagePath, $detail, $number, $category, $state);
 
 $finishPage = "managerFastFood.php";
