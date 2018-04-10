@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
 	<title></title>
 </head>
 <body>

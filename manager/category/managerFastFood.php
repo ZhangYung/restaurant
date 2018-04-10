@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
 	<title></title>
 </head>
 <body>
@@ -14,9 +15,9 @@
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
-			$productsJson = getProducts(NULL, 1, NULL);
+			getProducts(NULL, 1, NULL);
 			// $products = json_decode($productsJson);
-			var_dump($productsJson);
+			// var_dump($productsJson);
 		  ?>
 		</tr>
 	</table>
