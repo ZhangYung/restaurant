@@ -6,11 +6,11 @@
 </head>
 <body>
 <?php 
-$addType = $_POST("addType");
+// $addType = $_POST("addType");
 // $titleName = $_POST("titleName");
 // $price = $_POST("price");
-echo "addType:";
-echo $addType;
+// echo "addType:";
+// echo $addType;
 
 // 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 // 	require $databaseManagerphpPath;
