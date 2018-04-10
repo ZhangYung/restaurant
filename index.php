@@ -18,7 +18,7 @@ getOrders(NULL, NULL, NULL);
 // checkAndCreateTable($meimeiShopOrderTable);
 // checkAndCreateTable($meimeiShopProductTable);
 
-addOrEditProduct(NULL, "矿泉水", 3, "http://www.baidu.com/dasa.png", "好喝", 9999, 1, 1);
+// addOrEditProduct(NULL, "矿泉水", 3, "http://www.baidu.com/dasa.png", "好喝", 9999, 1, 1);
 // addOrEditOrder(NULL, 3, intval(time()), 100, "1,2,3", "炒饭,可乐,鸡汤", "10.50,3,15", "2,1,3", 1);
 
 ?>
