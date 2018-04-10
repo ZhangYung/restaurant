@@ -15,7 +15,6 @@
 	$price = $_POST["price"];
 	$number = $_POST["number"];
 	$file = $_FILES["file"];
-	var_dump($file);
 
 	// 允许上传的图片后缀
 	$allowedExts = array("gif", "jpeg", "jpg", "png");
@@ -48,7 +47,6 @@
 	            move_uploaded_file($file["tmp_name"], $uploadPath);
 	        }
 	    }
-	    echo "上传文件成功";
 	} else {
 		echo "type:" . $file["type"] . "<br>" . $file["size"] . "<br>" . $extension;
 	    die ("非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb");
@@ -70,7 +68,7 @@
 		$productCategory = "其他";
 	}
  ?>
-	<p>添加成功 <?php echo $productCategory; ?> </p>
+	<p>添加 <?php echo $productCategory; ?> 成功</p>
 	<br>
 	<br>
 	<form action=<?php echo $finishPage ?> method="get">

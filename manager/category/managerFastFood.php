@@ -9,6 +9,15 @@
 	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
 	</form>
 	<br>
-<h1>fastFood</h1>
+	<table>
+		<?php
+			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
+			require $databaseManagerphpPath;
+			$productsJson = getProducts(NULL, 1, NULL);
+			$products = json_decode($productsJson);
+			var_dump($products);
+		  ?>
+		<tr></tr>
+	</table>
 </body>
 </html>
