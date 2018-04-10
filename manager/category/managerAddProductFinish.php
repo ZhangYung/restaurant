@@ -49,7 +49,7 @@
 	    }
 	    echo "上传文件成功";
 	} else {
-		echo "type:" $file["type"] . "<br>" . $file["size"] . "<br>" . $extension;
+		echo "type:" . $file["type"] . "<br>" . $file["size"] . "<br>" . $extension;
 	    die ("非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb");
 	}
 
