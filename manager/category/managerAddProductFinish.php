@@ -4,42 +4,33 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
 
 </head>
+<body>
 <?php 
-//config.php  数据库登录配置，就不共享出来了。
-echo $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php" . "<br>"; 
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
-	$fileFoldPath = $_SERVER['DOCUMENT_ROOT'] . "/restaurant/uploadProductImage/";
-	echo $fileFoldPath . "<br>";
-	echo $mysqlServer . "<br>";
-	echo $mysqlUsername . "<br>";
-	echo $mysqlPassword . "<br>";
-//连接mysql  请自行配置数据库$mysqlServer, $mysqlUsername, $mysqlPassword
-	$conn = mysql_connect($mysqlServer, $mysqlUsername, $mysqlPassword);
-	if (!$conn) {
-		die("数据库连接失败，请联系管理员。");
-	}
+	require $databaseManagerphpPath;
 
-	echo "判断数据库是否存在pre";
-	// $databaseName = "meimeishop";
-	// $result = $conn->query("show databases like '" . $databaseName . "'");
-	// $row = $result->fetchAll();
-	// echo "判断数据库是否存在";
-	// echo $row;
-	// if (count($row) < '1') {
-	// //创建数据库
-	// 	if ($conn->query("create database " . $databaseName) === TRUE) {
-	// 		echo "创建数据库";
-	// 	 } else {
-	// 	 	echo "创建数据库失败";
-	// 	 }
-	// }
+	// $uploadImageFileFoldPath;
+ // 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
+$addType = $_POST("addType");
+$titleName = $_POST("titleName");
+$price = $_POST("price");
+echo $addType;
+// addOrEditProduct($productId, $name, $price, $imagePath, $detail, $number, $category, $state);
+
+$finishPage = "managerFastFood.php";
+if ($addType == 2) {
+	$finishPage = "managerHotPot.php";
+} elseif ($addType == 3) {
+	$finishPage = "managerDrinks.php";
+} elseif ($addType == 4) {
+	$finishPage = "managerOthers.php";
+}
 
  ?>
-<body>
 	<p>添加成功</p>
 	<br>
 	<br>
-	<form action="managerFastFood.php" method="get">
+	<form action="<?php echo "\"" . $finishPage . "\"" ?>" method="get">
 		<button class="managerAdd" type="submit" name="addType" value="drinks"> 返回 </button> 
 	</form>
 </body>
