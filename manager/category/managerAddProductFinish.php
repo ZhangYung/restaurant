@@ -21,6 +21,7 @@
 	$extension = end($temp);     // 获取文件后缀名
 
 	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $_FILES["file"]["name"];
+	echo $uploadPath;
 	if ((($_FILES["file"]["type"] == "image/gif")
 	|| ($_FILES["file"]["type"] == "image/jpeg")
 	|| ($_FILES["file"]["type"] == "image/jpg")
@@ -46,6 +47,7 @@
 	            move_uploaded_file($_FILES["file"]["tmp_name"], $uploadPath);
 	        }
 	    }
+	    echo "上传文件成功";
 	}
 	else
 	{
@@ -53,7 +55,7 @@
 	}
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-	addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, 1);
+	// addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
 
 	$productCategory = "快餐";
 	$finishPage = "managerFastFood.php";
