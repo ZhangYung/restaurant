@@ -18,7 +18,6 @@
 	var_dump($file);
 
 	// 允许上传的图片后缀
-	$allowedExts = array("gif", "jpeg", "jpg", "png");
 	$temp = explode(".", $file["name"]);
 	$extension = end($temp);     // 获取文件后缀名
 
@@ -48,11 +47,9 @@
 	        }
 	    }
 	    echo "上传文件成功";
+	} else {
+	    die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
 	}
-	// else
-	// {
-	//     die "非法的文件格式, 文件只支持png,jpg,jpeg,文件要少于200kb";
-	// }
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
 	// addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
