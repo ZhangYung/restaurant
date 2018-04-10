@@ -15,7 +15,7 @@
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$productsJson = getProducts(NULL, 1, NULL);
-			$products = json_decode($productsJson);
+			$products = json_decode($productsJson, TRUE);
 			$count = count($products);
 			echo $count;
 			for ($i=0; $i < $count; $i++) { 
@@ -24,6 +24,7 @@
 				echo "create <br>";
 
 				$subProduct = $products[$i];
+				var_dump($subProduct);
 				var_dump($subProduct["name"]);
 				$model->initWithDic($subProduct);
 
