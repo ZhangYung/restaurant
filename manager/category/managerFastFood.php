@@ -25,7 +25,7 @@
 				$model->initWithDic($subProduct);
 				var_dump($model->imagePath);
 				echo "<td>"
-				echo "<img src=" . $model->imagePath . " width=30%"  . "/>";
+				echo "<img src=" . $model->imagePath . " "  . "/>";
 				echo "</td>"
 
 				// echo "<td>"
