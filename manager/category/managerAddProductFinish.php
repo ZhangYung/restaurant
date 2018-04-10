@@ -17,7 +17,7 @@
 	$file = $_FILES["file"];
 	var_dump($file);
 
-	允许上传的图片后缀
+	// 允许上传的图片后缀
 	$allowedExts = array("gif", "jpeg", "jpg", "png");
 	$temp = explode(".", $file["name"]);
 	$extension = end($temp);     // 获取文件后缀名
