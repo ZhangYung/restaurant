@@ -14,7 +14,7 @@
 	</form>
 	<br>
 
-	<table class="tablea">
+	<table class="table">
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
