@@ -18,7 +18,9 @@
 	$price = NULL;
 	$number = NULL;
 	if ($changeProductId != NULL) {
+		echo $changeProductId;
 		$productJson = getProducts($changeProductId, NULL, NULL);
+		var_dump($productJson);
 		$product = json_decode($productJson, TRUE);
 		var_dump($product);
 		$model = new shopProduct();
