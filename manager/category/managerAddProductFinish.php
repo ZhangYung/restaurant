@@ -64,7 +64,7 @@
 	}
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-	addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
+	addOrEditProduct($changeProductId, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
 
 	$productCategory = "快餐";
 	$finishPage = "managerFastFood.php";
