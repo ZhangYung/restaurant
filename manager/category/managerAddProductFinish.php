@@ -14,6 +14,7 @@
 	$detail = $_POST["detail"];
 	$price = $_POST["price"];
 	$number = $_POST["number"];
+	$status = $_POST["status"];
 	$file = $_FILES["file"];
 
 	// 允许上传的图片后缀
@@ -59,7 +60,7 @@
 	}
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-	addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, 1);
+	addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
 
 	$productCategory = "快餐";
 	$finishPage = "managerFastFood.php";

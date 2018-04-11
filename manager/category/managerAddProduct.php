@@ -41,6 +41,10 @@
 	商品描述：<input type="text" name="detail" value=<?php echo isset($detail) ? $detail : ""; ?> /><br>
 	商品价格：<input type="number" name="price" step="0.01" min="0.01" max="999999" value=<?php echo isset($price) ? $price : ""; ?> /><br>
 	商品数量：<input type="number" name="number" step="1" min="1" max="9999999"  value=<?php echo isset($number) ? $number : "9999"; ?> /><br>
+	<select name="status">
+	<option value="1">正常售卖</option>
+	<option value="2">停售</option>
+	</select><br>
 
 	<input type="submit" name="submit" value="提交">
 	</form>
