@@ -18,18 +18,15 @@
 	$price = NULL;
 	$number = NULL;
 	if ($changeProductId != NULL) {
-		echo $changeProductId;
 		$productJson = getProducts($changeProductId, NULL, NULL);
-		var_dump($productJson);
 		$product = json_decode($productJson, TRUE);
-		var_dump($product);
 		$model = new shopProduct();
 		$model->initWithDic($product);
-		var_dump($model);
 		$titleName = $model->name;
 		$detail = $model->detail;
 		$price = $model->price;
 		$number = $model->number;
+		echo $titleName . $detail . $price . $number;
 	}
 	 ?>
 
