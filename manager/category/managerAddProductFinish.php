@@ -23,7 +23,7 @@
 	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
 	// $uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
-	$uploadPath = intval(time()) . $file["name"];
+	$uploadPath = dirname(__FILE__) . "/" . intval(time()) . $file["name"];
 	echo $uploadPath . "<br>";
 	if ((($file["type"] == "image/gif")
 	|| ($file["type"] == "image/jpeg")
