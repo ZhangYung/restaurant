@@ -33,10 +33,10 @@
 
 				echo "<td>";
 				echo "<br>";
-				echo "<p> " . $model->name . "</p> <br>";
-				echo "<p> " . $model->detail . "</p> <br>";
-				echo "<p> 剩余：" . $model->number . "</p> <br>";
-				echo "<p> 状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "</p> <br>";
+				echo "" . $model->name . "<br>";
+				echo "" . $model->detail . "<br>";
+				echo "剩余：" . $model->number . "<br>";
+				echo "状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "<br>";
 				echo "</td>";
 
 				echo "<td>";
@@ -44,8 +44,6 @@
 				echo "<input type=\"hidden\" name=\"addType\" value=\"1\">";
 				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 				echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
-
-// echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";				echo "</form>";
 				echo "</td>";
 
 				echo " </tr>";
