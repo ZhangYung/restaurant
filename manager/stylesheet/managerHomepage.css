@@ -11,3 +11,9 @@ button.managerAdd {
     outline: none;
     border-radius: 4px;
 }
+
+hr.borderLine {
+    height:1px;
+    border:none;
+    border-top:1px solid #555555;
+}

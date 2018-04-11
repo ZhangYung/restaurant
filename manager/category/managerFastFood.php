@@ -24,12 +24,13 @@
 				$model->initWithDic($subProduct);
 				echo "<td>";
 				echo "<img src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+				echo "<hr class=\"borderLine\" />";
 				echo "</td>";
 
 				echo "<td>";
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
-				echo "<hr style=\"height:1px;border:none;border-top:1px solid #555555;\" />";
+				echo "<hr class=\"borderLine\" />";
 				echo "</td>";
 
 				echo " </tr> <br>";
