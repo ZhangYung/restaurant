@@ -19,6 +19,7 @@
 			$count = count($products);
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr>";
+
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
@@ -31,7 +32,7 @@
 				echo "<p> " . $model->name . "</p> <br>";
 				echo "<p> " . $model->detail . "</p> <br>";
 				echo "<p> 剩余：" . $model->number . "</p> <br>";
-				echo "<p> 状态：" . $model->state == 1 ? (echo "正常售卖中") : (echo "已停售") . "</p> <br>";
+				echo "<p> 状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "</p> <br>";
 				echo "</td>";
 
 				echo "<td>";
@@ -39,9 +40,9 @@
 				echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";
 				echo "</form>";
 				echo "</td>";
+
 				echo " </tr>";
 			}
-			
 		  ?>
 	</table>
 </body>
