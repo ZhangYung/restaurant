@@ -43,7 +43,7 @@
 
 	        if (file_exists($file["tmp_name"]))
 	        {
-	            die($uploadPath . " 临时文件不存在。如果多次尝试都有此问题，请联系管理员");
+	            die($file["tmp_name"] . " 临时文件不存在。如果多次尝试都有此问题，请联系管理员");
 	        }
 	        if (file_exists($uploadPath))
 	        {
