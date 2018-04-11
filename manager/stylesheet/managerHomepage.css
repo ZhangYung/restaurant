@@ -12,13 +12,13 @@ button.managerAdd {
     border-radius: 4px;
 }
 
+table.borderType {
+    border: 1px;
+    background: #ff6161;
+}
+
 hr.borderLine {
     height:1px;
     border:none;
     border-top:1px solid #555555;
-}
-
-table.borderType {
-    border: 1px;
-    background: #ff6161;
 }
