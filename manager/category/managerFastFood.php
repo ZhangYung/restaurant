@@ -6,7 +6,7 @@
 </head>
 <body>
 		<?php
-			$currentCategory = 1;
+			$currentCategory = $_GET["category"];
 		?>
 	<br>
 	<form action="managerAddProduct.php" method="get">

@@ -65,15 +65,12 @@
 	addOrEditProduct($changeProductId, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
 
 	$productCategory = "快餐";
-	$finishPage = "managerFastFood.php";
+	$finishPage = "managerFastFood.php?category=" . $addType;
 	if ($addType == 2) {
-		$finishPage = "managerHotPot.php";
 		$productCategory = "火锅";
 	} elseif ($addType == 3) {
-		$finishPage = "managerDrinks.php";
 		$productCategory = "饮料";
 	} elseif ($addType == 4) {
-		$finishPage = "managerOthers.php";
 		$productCategory = "其他";
 	}
  ?>
