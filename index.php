@@ -9,7 +9,7 @@
 
 <frameset cols="20%, *" frameBorder="1">
 	<frame name="selectContent" src="category/homePageLeft.php" noresize="noresize"></frame>
-	<frame name="mainContent" src="category/fastFood.php"></frame>
+	<frame name="mainContent" src="category/fastFood.php?category=1"></frame>
 </frameset>
 </body>
 </html>
