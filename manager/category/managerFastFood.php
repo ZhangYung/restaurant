@@ -29,8 +29,8 @@
 				echo "<td>";
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
-				echo "</td>";
 				echo "<hr style=\"height:1px;border:none;border-top:1px solid #555555;\" />";
+				echo "</td>";
 
 				echo " </tr> <br>";
 			}

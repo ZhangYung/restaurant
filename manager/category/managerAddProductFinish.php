@@ -22,7 +22,7 @@
 	$extension = end($temp);     // 获取文件后缀名
 	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
-	$imagePath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	$imagePath = $uploadImageFileFoldPath . intval(time()) . md5($file["name"]) . "." . $extension;
 	$uploadPath = $_SERVER['DOCUMENT_ROOT'] . $imagePath;
 	echo $uploadPath . "<br>";
 	if ((($file["type"] == "image/gif")
