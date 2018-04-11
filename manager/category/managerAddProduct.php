@@ -18,16 +18,21 @@
 	$price = NULL;
 	$number = NULL;
 	if ($changeProductId != NULL) {
-		$productJson = getProducts($changeProductId, NULL, NULL);
-		$product = json_decode($productJson, TRUE);
-		var_dump($product);
+		$productsJson = getProducts($changeProductId, NULL, NULL);
+		$products = json_decode($productsJson, TRUE);
+		$count = count($products);
+		if ($count == 0) {
+			die("无法找到该商品");
+		}
+
 		$model = new shopProduct();
-		$model->initWithDic($product);
+		$subProduct = $products[0];
+		$model->initWithDic($subProduct);
+
 		$titleName = $model->name;
 		$detail = $model->detail;
 		$price = $model->price;
 		$number = $model->number;
-		echo $titleName . $detail . $price . $number;
 	}
 	 ?>
 
