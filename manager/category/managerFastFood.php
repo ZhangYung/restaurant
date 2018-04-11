@@ -18,7 +18,7 @@
 			$products = json_decode($productsJson, TRUE);
 			$count = count($products);
 			for ($i=0; $i < $count; $i++) { 
-				echo "<tr>";
+				echo "<tr height=\"80\">";
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
