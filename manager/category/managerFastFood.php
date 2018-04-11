@@ -12,10 +12,6 @@
 	<br>
 	<table class="tablea">
 		<?php
-			function productChangeState($model) {
-				($model->state == 1) ? $model = 2 : $model = 1;
-			}
-
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$productsJson = getProducts(NULL, 1, NULL);
@@ -28,7 +24,9 @@
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
 				echo "<td >";
-				echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+				if ($webHttpAddress != NULL) {
+					echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+				}
 				echo "</td>";
 
 				echo "<td>";
@@ -36,7 +34,7 @@
 				echo "" . $model->name . "<br>";
 				echo "" . $model->detail . "<br>";
 				echo "剩余：" . $model->number . "<br>";
-				echo "状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "<br>";
+				echo "状态：" . $model->state . ($model->state == 1) ? "正常售卖中" : "已停售" . "<br>";
 				echo "</td>";
 
 				echo "<td>";
