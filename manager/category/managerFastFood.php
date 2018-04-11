@@ -10,7 +10,7 @@
 	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
 	</form>
 	<br>
-	<table>
+	<table border="1">
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
@@ -24,16 +24,14 @@
 				$model->initWithDic($subProduct);
 				echo "<td height=\"80px\">";
 				echo "<img  src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
-				echo "<hr class=\"borderLine\" />";
 				echo "</td>";
 
 				echo "<td height=\"80px\">";
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
-				echo "<hr class=\"borderLine\" />";
 				echo "</td>";
 
-				echo " </tr> <br>";
+				echo " </tr>";
 			}
 			
 		  ?>
