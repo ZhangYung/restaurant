@@ -10,7 +10,7 @@
 	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
 	</form>
 	<br>
-	<table class="borderType">
+	<table class="table">
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
@@ -26,10 +26,10 @@
 				echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				echo "</td>";
 
-				echo "<td >";
-				echo "<br >";
-				echo "<p > " . $model->name . "</p> <br>";
-				echo "<p > " . $model->detail . "</p><br>";
+				echo "<td>";
+				echo "<br>";
+				echo "<p> " . $model->name . "</p> <br>";
+				echo "<p> " . $model->detail . "</p> <br>";
 				echo "</td>";
 
 				echo " </tr>";
