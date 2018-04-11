@@ -19,7 +19,7 @@
 	$imagePath = NULL;
 
 	var_dump($file);
-	if ($file != NULL) {
+	if ($file["error"] == UPLOAD_ERR_OK) {
 		// 允许上传的图片后缀
 		$allowedExts = array("gif", "jpeg", "jpg", "png");
 		$temp = explode(".", $file["name"]);
