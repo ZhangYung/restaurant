@@ -12,7 +12,7 @@ button.managerAdd {
     border-radius: 4px;
 }
 
-button.elementButton {
+button.elementButton input.elementButton {
     display: block;
     width: 80px;
     font: normal 14px / 40px '微软雅黑';

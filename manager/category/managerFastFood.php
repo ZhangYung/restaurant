@@ -41,11 +41,10 @@
 
 				echo "<td>";
 				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
-				echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";
-				echo "</form>";
-
-				echo "<button class=\"elementButton\" onclick=\"productChangeState($model)\">" . ($model->state == 1) ? "停售" : "售卖" . "</button> ";
-
+				// echo "<input type=\"hidden\" name=\"addType\" value= >"
+				echo "<input class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑</input>";
+				
+// echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";				echo "</form>";
 				echo "</td>";
 
 				echo " </tr>";
