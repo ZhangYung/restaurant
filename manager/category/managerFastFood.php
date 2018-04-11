@@ -32,11 +32,10 @@
 				echo "</td>";
 
 				echo "<td>";
-				echo "<br>";
 				echo "" . $model->name . "<br>";
 				echo "" . $model->detail . "<br>";
 				echo "剩余：" . $model->number . "<br>";
-				echo "状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "<br>";
+				echo "状态：" . ($model->state == 1) ? "正常售卖中" : "已停售" . "";
 				echo "</td>";
 
 				echo "<td>";
