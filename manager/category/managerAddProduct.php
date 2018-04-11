@@ -13,7 +13,6 @@
 	require $databaseManagerphpPath;
 
 	$changeProductId = $_GET["changeProductId"];
-	echo $changeProductId;
 	$titleName = NULL;
 	$detail = NULL;
 	$price = NULL;
@@ -21,8 +20,10 @@
 	if ($changeProductId != NULL) {
 		$productJson = getProducts($changeProductId, NULL, NULL);
 		$product = json_decode($productJson, TRUE);
+		var_dump($product);
 		$model = new shopProduct();
 		$model->initWithDic($product);
+		var_dump($model);
 		$titleName = $model->name;
 		$detail = $model->detail;
 		$price = $model->price;
