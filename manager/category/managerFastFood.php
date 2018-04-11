@@ -10,7 +10,7 @@
 	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
 	</form>
 	<br>
-	<table border="1">
+	<table class="borderType">
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
@@ -22,11 +22,11 @@
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
-				echo "<td height=\"80px\">";
-				echo "<img  src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
-				echo "</td>";
+				echo "<td >";
+				echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+				// echo "</td>";
 
-				echo "<td height=\"80px\">";
+				// echo "<td >";
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
 				echo "</td>";
