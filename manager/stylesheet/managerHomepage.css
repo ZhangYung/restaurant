@@ -12,7 +12,7 @@ button.managerAdd {
     border-radius: 4px;
 }
 
-button.elementButton input.elementButton {
+elementButton {
     display: block;
     width: 80px;
     font: normal 14px / 40px '微软雅黑';
@@ -26,17 +26,17 @@ button.elementButton input.elementButton {
     border-radius: 4px;
 }
 
-table  {  
+tablea  {  
     border-collapse: collapse;  
 }  
-table td, table th  {  
+tablea td, table th  {  
     border: 1px solid #cad9ea;  
     color: #666;  
     height: 80px;  
 }  
-table tr:nth-child(odd)  {  
+tablea tr:nth-child(odd)  {  
     background: #fff;  
 }  
-table tr:nth-child(even)  {  
+tablea tr:nth-child(even)  {  
     background: #F5FAFA;  
 }  

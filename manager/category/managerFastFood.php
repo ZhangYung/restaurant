@@ -10,7 +10,7 @@
 	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
 	</form>
 	<br>
-	<table class="table">
+	<table class="tablea">
 		<?php
 			function productChangeState($model) {
 				($model->state == 1) ? $model = 2 : $model = 1;
