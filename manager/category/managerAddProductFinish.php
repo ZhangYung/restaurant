@@ -22,8 +22,7 @@
 	$extension = end($temp);     // 获取文件后缀名
 	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
-	// $uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
-	$uploadPath = dirname(__FILE__) . "/" . intval(time()) . $file["name"];
+	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
 	echo $uploadPath . "<br>";
 	if ((($file["type"] == "image/gif")
 	|| ($file["type"] == "image/jpeg")
@@ -43,7 +42,7 @@
 
 	        if (file_exists($file["tmp_name"]))
 	        {
-	            die($file["tmp_name"] . " 临时文件不存在。如果多次尝试都有此问题，请联系管理员");
+	            echo $file["tmp_name"] . " 临时文件不存在。如果多次尝试都有此问题，请联系管理员";
 	        }
 	        if (file_exists($uploadPath))
 	        {
@@ -52,7 +51,6 @@
 	        else
 	        {
 	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-	            
 	            $createImage = move_uploaded_file($file["tmp_name"], $uploadPath);
 	            if ($createImage == FALSE) {
 	            	die("创建图片失败， 请联系管理员");
