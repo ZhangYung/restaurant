@@ -34,13 +34,11 @@
 				echo "<p> 状态：" . $model->state == 1 ? (echo "正常售卖中") : (echo "已停售") . "</p> <br>";
 				echo "</td>";
 
-				?>
-				<td>
-				<form action="managerAddProduct.php" method="get">
-				<button class="elementButton" type="submit" name="addType" value="1"> 编辑 </button> 
-				</form>
-				</td>
-		<?php
+				echo "<td>";
+				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
+				echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";
+				echo "</form>";
+				echo "</td>";
 				echo " </tr>";
 			}
 			
