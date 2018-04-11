@@ -42,7 +42,7 @@
 				echo "</td>";
 
 				echo "<td>";
-				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
+				echo "<form action=\"managerAddProduct.php\" method=\"get\" id=\"form" . $i . "\">";
 				echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 				echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
