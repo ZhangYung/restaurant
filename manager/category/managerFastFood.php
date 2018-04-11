@@ -5,16 +5,20 @@
 	<title></title>
 </head>
 <body>
+		<?php
+			$currentCategory = 1;
+		?>
 	<br>
 	<form action="managerAddProduct.php" method="get">
-	<button class="managerAdd" type="submit" name="addType" value="1"> 添加 </button> 
+	<button class="managerAdd" type="submit" name="addType" value="<?php echo $currentCategory; ?>"> 添加 </button> 
 	</form>
 	<br>
+
 	<table class="tablea">
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
-			$productsJson = getProducts(NULL, 1, NULL);
+			$productsJson = getProducts(NULL, $currentCategory, NULL);
 			$products = json_decode($productsJson, TRUE);
 			$count = count($products);
 			for ($i=0; $i < $count; $i++) { 
@@ -39,7 +43,7 @@
 
 				echo "<td>";
 				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
-				echo "<input type=\"hidden\" name=\"addType\" value=\"1\">";
+				echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 				echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
 				echo "</td>";

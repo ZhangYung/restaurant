@@ -45,6 +45,7 @@
 	<select name="status">
 	<option value="1">正常售卖</option>
 	<option value="2">停售</option>
+	<option value="3">删除</option>
 	</select><br>
 
 	<input type="submit" name="submit" value="提交">
