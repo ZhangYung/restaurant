@@ -13,6 +13,7 @@
 	require $databaseManagerphpPath;
 
 	$changeProductId = $_GET["changeProductId"];
+	echo $changeProductId;
 	$titleName = NULL;
 	$detail = NULL;
 	$price = NULL;
