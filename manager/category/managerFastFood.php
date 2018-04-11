@@ -25,7 +25,7 @@
 				$model->initWithDic($subProduct);
 				echo $model->imagePath;
 				echo "<td>";
-				echo "<img src=" . $model->imagePath . " "  . "/>";
+				echo "<img src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				echo "</td>";
 
 				echo "<td>";

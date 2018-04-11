@@ -22,7 +22,8 @@
 	$extension = end($temp);     // 获取文件后缀名
 	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
-	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	$imagePath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	$uploadPath = $_SERVER['DOCUMENT_ROOT'] . $imagePath;
 	echo $uploadPath . "<br>";
 	if ((($file["type"] == "image/gif")
 	|| ($file["type"] == "image/jpeg")
@@ -39,11 +40,6 @@
 	    }
 	    else
 	    {   
-
-	        if (file_exists($file["tmp_name"]))
-	        {
-	            echo $file["tmp_name"] . " 临时文件不存在。如果多次尝试都有此问题，请联系管理员";
-	        }
 	        if (file_exists($uploadPath))
 	        {
 	            die($uploadPath . " 文件已经存在。如果多次尝试都有此问题，请联系管理员");
@@ -63,7 +59,7 @@
 	}
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
-	addOrEditProduct(NULL, $titleName, $price, $uploadPath, $detail, $number, $addType, 1);
+	addOrEditProduct(NULL, $titleName, $price, $imagePath, $detail, $number, $addType, 1);
 
 	$productCategory = "快餐";
 	$finishPage = "managerFastFood.php";
