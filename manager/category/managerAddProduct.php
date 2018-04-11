@@ -4,9 +4,21 @@
 	<title></title>
 </head>
 <body>
+	<?php 
+		$category = $_GET["addType"];
+		if ($category == 1) {
+			echo "<p>添加快餐</p>";
+		} elseif ($category == 2) {
+			echo "<p>添加火锅</p>";
+		} elseif ($category == 3) {
+			echo "<p>添加饮料</p>";
+		} elseif ($category == 4) {
+			echo "<p>添加其他</p>";
+		}
+	?>
 	<br>
 	<form action="managerAddProductFinish.php" method="POST" enctype="multipart/form-data">
-	<input type="hidden" name="addType" value=<?php echo $_GET["addType"]; ?> >
+	<input type="hidden" name="addType" value=<?php echo $category; ?> >
 
 	<?php 
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
