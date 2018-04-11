@@ -20,6 +20,7 @@
 	if ($changeProductId != NULL) {
 		$productJson = getProducts($changeProductId, NULL, NULL);
 		$product = json_decode($productJson, TRUE);
+		var_dump($product);
 		$model = new shopProduct();
 		$model->initWithDic($product);
 		$titleName = $model->name;
