@@ -27,8 +27,9 @@
 				echo "</td>";
 
 				echo "<td >";
+				echo "<br >";
 				echo "<p > " . $model->name . "</p> <br>";
-				echo "<p > " . $model->detail . "</p> <br>";
+				echo "<p > " . $model->detail . "</p><br>";
 				echo "</td>";
 
 				echo " </tr>";

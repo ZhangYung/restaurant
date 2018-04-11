@@ -19,7 +19,6 @@ hr.borderLine {
 }
 
 table.borderType {
-    border:1px;
-    border-collapse:collapse;
-
+    border: 1px;
+    background: #ff6161;
 }
