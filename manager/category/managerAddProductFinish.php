@@ -20,8 +20,11 @@
 	$allowedExts = array("gif", "jpeg", "jpg", "png");
 	$temp = explode(".", $file["name"]);
 	$extension = end($temp);     // 获取文件后缀名
+	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
-	$uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	// $uploadPath = $uploadImageFileFoldPath . intval(time()) . $file["name"];
+	$uploadPath = intval(time()) . $file["name"];
+	echo $uploadPath . "<br>";
 	if ((($file["type"] == "image/gif")
 	|| ($file["type"] == "image/jpeg")
 	|| ($file["type"] == "image/jpg")
@@ -44,9 +47,11 @@
 	        else
 	        {
 	            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-	            echo $uploadPath . "创建图片成功";
-	            var_dump(move_uploaded_file($file["tmp_name"], $uploadPath));
 	            
+	            $createImage = move_uploaded_file($file["tmp_name"], $uploadPath);
+	            if ($createImage == FALSE) {
+	            	die("创建图片失败， 请联系管理员");
+	            }
 	        }
 	    }
 	} else {
