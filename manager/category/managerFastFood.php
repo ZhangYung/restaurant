@@ -18,16 +18,16 @@
 			$products = json_decode($productsJson, TRUE);
 			$count = count($products);
 			for ($i=0; $i < $count; $i++) { 
-				echo "<tr height=\"80\">";
+				echo "<tr>";
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
-				echo "<td>";
-				echo "<img src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+				echo "<td height=\"80px\">";
+				echo "<img  src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				echo "<hr class=\"borderLine\" />";
 				echo "</td>";
 
-				echo "<td>";
+				echo "<td height=\"80px\">";
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
 				echo "<hr class=\"borderLine\" />";
