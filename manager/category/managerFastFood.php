@@ -41,8 +41,8 @@
 
 				echo "<td>";
 				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
-				echo "<input type=\"hidden\" name=\"addType\" value=\"1\">"
-				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">"
+				echo "<input type=\"hidden\" name=\"addType\" value=\"1\">";
+				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 				echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
 
 // echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";				echo "</form>";
