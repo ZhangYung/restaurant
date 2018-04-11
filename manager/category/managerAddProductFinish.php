@@ -9,6 +9,7 @@
 	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 	require $databaseManagerphpPath;
 
+	$changeProductId = $_POST["changeProductId"];
 	$addType = $_POST["addType"];
 	$titleName = $_POST["titleName"];
 	$detail = $_POST["detail"];
@@ -18,7 +19,6 @@
 	$file = $_FILES["file"];
 	$imagePath = NULL;
 
-	var_dump($file);
 	if ($file["error"] == UPLOAD_ERR_OK) {
 		// 允许上传的图片后缀
 		$allowedExts = array("gif", "jpeg", "jpg", "png");

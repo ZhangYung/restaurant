@@ -35,6 +35,7 @@
 		$number = $model->number;
 	}
 	 ?>
+	<input type="hidden" name="changeProductId" value=<?php echo $changeProductId; ?> >
 
 	商品图片:(文件要少于200kb) <input type="file" name="file"><br>
 	商品名称：<input type="text" name="titleName" value=<?php echo isset($titleName) ? $titleName : ""; ?> /><br>
