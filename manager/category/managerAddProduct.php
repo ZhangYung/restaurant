@@ -55,9 +55,9 @@
 	商品价格：<input type="number" name="price" step="0.01" min="0.01" max="999999" <?php echo (isset($price) ? ("value=\"" . $price . "\"") : ""); ?> /><br>
 	商品数量：<input type="number" name="number" step="1" min="1" max="9999999" <?php echo (isset($number) ? ("value=\"" . $number . "\"") : ""); ?>  /><br>
 	<select name="status">
-	<option value="1">正常售卖</option>
-	<option value="2">停售</option>
-	<option value="3">删除</option>
+	<option value="1" <?php echo $model->state == 1 ? "selected" : ""; ?>>正常售卖</option>
+	<option value="2" <?php echo $model->state == 2 ? "selected" : ""; ?>>停售</option>
+	<option value="3" <?php echo $model->state == 3 ? "selected" : ""; ?>>删除</option>
 	</select><br>
 
 	<input type="submit" name="submit" value="提交">
