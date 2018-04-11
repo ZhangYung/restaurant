@@ -12,6 +12,10 @@
 	<br>
 	<table class="table">
 		<?php
+			function productChangeState($model) {
+				($model->state == 1) ? $model = 2 : $model = 1;
+			}
+
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$productsJson = getProducts(NULL, 1, NULL);
@@ -39,6 +43,9 @@
 				echo "<form action=\"managerAddProduct.php\" method=\"get\">";
 				echo "<button class=\"elementButton\" type=\"submit\" name=\"addType\" value=\"1\"> 编辑 </button> ";
 				echo "</form>";
+
+				echo "<button class=\"elementButton\" onclick=\"productChangeState($model)\">" . ($model->state == 1) ? "停售" : "售卖" . "</button> ";
+
 				echo "</td>";
 
 				echo " </tr>";
