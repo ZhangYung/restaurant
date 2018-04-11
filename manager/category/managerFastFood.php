@@ -17,13 +17,11 @@
 			$productsJson = getProducts(NULL, 1, NULL);
 			$products = json_decode($productsJson, TRUE);
 			$count = count($products);
-			echo $count;
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr>";
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
-				echo $model->imagePath;
 				echo "<td>";
 				echo "<img src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				echo "</td>";
@@ -32,6 +30,7 @@
 				echo "<p > " . $model->name . "</p> <br>";
 				echo "<p > " . $model->detail . "</p> <br>";
 				echo "</td>";
+				echo "<hr style=\"height:1px;border:none;border-top:1px solid #555555;\" />"
 
 				echo " </tr> <br>";
 			}
