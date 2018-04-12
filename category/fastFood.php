@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css">
 	<title></title>
 </head>
 <body>
@@ -11,7 +11,7 @@ if ($currentCategory == NULL) {
 	$currentCategory = 1;
 }
 
-echo "<table class=\"table\">";
+echo "<table width=\"100%\" height=\"100%\">";
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
 $productsJson = getProducts(NULL, $currentCategory, 1);
