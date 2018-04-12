@@ -65,7 +65,7 @@
 	addOrEditProduct($changeProductId, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
 
 	$productCategory = "快餐";
-	$finishPage = "managerFastFood.php?category=" . $addType;
+	$finishPage = "managerFastFood.php";
 	if ($addType == 2) {
 		$productCategory = "火锅";
 	} elseif ($addType == 3) {
@@ -73,12 +73,13 @@
 	} elseif ($addType == 4) {
 		$productCategory = "其他";
 	}
-	echo $finishPage;
  ?>
 	<p>添加 <?php echo $productCategory; ?> 成功</p>
 	<br>
 	<br>
 	<form action=<?php echo $finishPage ?> method="get">
+		<input type="hidden" name="category" value=<?php echo $addType?>>
+		 
 		<button class="managerAdd" type="submit"> 返回 </button> 
 	</form>
 </body>
