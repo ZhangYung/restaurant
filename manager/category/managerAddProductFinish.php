@@ -73,6 +73,7 @@
 	} elseif ($addType == 4) {
 		$productCategory = "其他";
 	}
+	echo $finishPage;
  ?>
 	<p>添加 <?php echo $productCategory; ?> 成功</p>
 	<br>
