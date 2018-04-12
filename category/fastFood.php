@@ -55,7 +55,7 @@ for ($i=0; $i < $count; $i++) {
 	// echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 	// echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 
-	echo "<button class=\"elementButton\" onclick=\"clickAdd(\"sdk\")\">添加</button> "
+	echo "<button class=\"elementButton\" onclick=\"clickAdd(\"sdk\")\">添加</button> ";
 	echo "</td>";
 
 	echo " </tr>";
