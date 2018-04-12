@@ -23,7 +23,7 @@
 <?php
 echo "商品";
 $orderProductIds = $_SESSION['purchaseProducts'];
-$productIdArray = explode(".", $orderProductIds);
+$productIdArray = explode(",", $orderProductIds);
 var_dump($productIdArray);
 var_dump(count($productIdArray));
 ?>
