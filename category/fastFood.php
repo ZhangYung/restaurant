@@ -11,7 +11,8 @@
 </head>
 
 <script type="text/javascript">
-	function clickAdd() {
+	function clickAdd(producId) {
+		alert(producId);
 		var producIds = <% session.getAttribute("purchaseProducts") %>;
 		alert(producIds);
 		// alert(productId);
@@ -55,7 +56,7 @@ for ($i=0; $i < $count; $i++) {
 	// echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 	// echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
 
-	echo "<button class=\"elementButton\" onclick=\"clickAdd()\">添加</button> ";
+	echo "<button class=\"elementButton\" onclick=\"clickAdd(" . $model->productId .")\">添加</button> ";
 	echo "</td>";
 
 	echo " </tr>";
