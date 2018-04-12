@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 	function clickCreateOrder() {
-		alert("down");
+		parent.window.location.href="http://www.baidu.com";
 	}
 </script>
 
@@ -23,13 +23,13 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
-echo "已选择 ";
+echo "已选择数量： ";
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
 $productsJson = getProductsByIds($productIdArray);
 $products = json_decode($productsJson, TRUE);
 $count = count($products);
-echo $count . " 个。总价¥：";
+echo $count . " 。总价¥：";
 $priceSum = 0;
 for ($i=0; $i < $count; $i++) { 
 	$model = new shopProduct();
