@@ -65,7 +65,7 @@
 	addOrEditProduct($changeProductId, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
 
 	$productCategory = "快餐";
-	$finishPage = "managerFastFood.php";
+	$finishPage = "managerFastFood.php?category=" . $addType;
 	if ($addType == 2) {
 		$productCategory = "火锅";
 	} elseif ($addType == 3) {
@@ -79,7 +79,7 @@
 	<br>
 	<br>
 	<form action=<?php echo $finishPage ?> method="get">
-		<button class="managerAdd" type="submit" name="addType" value=<?php echo $addType; ?>> 返回 </button> 
+		<button class="managerAdd" type="submit"> 返回 </button> 
 	</form>
 </body>
 </html>
