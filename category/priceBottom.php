@@ -22,7 +22,10 @@
 				
 <?php
 echo "商品";
-echo $_SESSION['purchaseProducts'];
+$orderProductIds = $_SESSION['purchaseProducts'];
+$productIdArray = explode(".", $orderProductIds);
+var_dump($productIdArray);
+var_dump(count($productIdArray));
 ?>
 			</td>
 			<td width="20%">

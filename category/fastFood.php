@@ -26,7 +26,6 @@ if ($addProductId != NULL) {
 		$orderProductIds = $addProductId;
 	}
 	$_SESSION["purchaseProducts"] = $orderProductIds;
-	echo $orderProductIds;
 
 	echo "<script language=\"javascript\"> parent.priceBottom.location.reload(); </script>";
 }
