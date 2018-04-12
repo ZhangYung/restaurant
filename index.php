@@ -36,7 +36,7 @@
 		?>
 	</div>
 
-	<div id="footer" style="text-align: center">
+	<div id="footer" style="text-align: center;">
 		版权 ©2017-2018美美餐厅水云居
 	</div>
 
