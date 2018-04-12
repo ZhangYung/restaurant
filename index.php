@@ -18,7 +18,7 @@
 </script>
 <body>
 
-<div id="container" style="width: 100%">
+<div id="container" style="width: 100%; position:absolute;top:0px;bottom:0px;">
 	<div id="header" style="background-color:#FFA500; height: 8%; width: 100%;">
 		<h1 style="text-align:center">水云居</h1>
 	</div>
