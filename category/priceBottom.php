@@ -21,6 +21,8 @@
 			<td width="80%">
 				
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
+require $databaseManagerphpPath;
 echo "已选择 ";
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
