@@ -31,7 +31,7 @@ $idCount = count($productIdArray);
 echo $idCount . " 。总价¥：";
 
 for ($i=0; $i < $idCount; $i++) { 
-	$productId = $productIdArray;
+	$productId = $productIdArray[$i];
 	if ($productIdNumDic[$productId] == NULL) {
 		$productIdNumDic[$productId] = 1;
 	} else {
@@ -47,7 +47,7 @@ for ($i=0; $i < $count; $i++) {
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	$priceSum = $priceSum + $model->price * $productIdNumDic[$model->productId];
+	$priceSum = $priceSum + ($model->price) * $productIdNumDic[$model->productId];
 }
 echo $priceSum;
 ?>
