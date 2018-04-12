@@ -12,8 +12,8 @@
 </head>
 
 <script type="text/javascript">
-	function clickChooseProductFunction(category) {
-
+	function clickCreateOrder() {
+		<?php echo "clickCreateOrder"; ?>
 	}
 </script>
 <body>
@@ -44,9 +44,7 @@
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:20%;">
-		<?php 
-			require "category/priceBottom.php";
-		?>
+		<iframe src="category/priceBottom.php" name="priceBottom" frameborder=0 width="100%" height="100%" ></iframe>
 	</div>
 
 	<div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
