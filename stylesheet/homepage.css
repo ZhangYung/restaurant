@@ -1,9 +1,9 @@
 
-a.link {
+a:link {
     color: #ff0000;
 }
 
-a.visited {
+a:visited {
     color: #ff0000;
 }
 
