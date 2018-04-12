@@ -63,6 +63,16 @@ input.elementButton {
     border-radius: 4px;
 }
 
+input.elementGrayButton {
+    color: #fff;
+    width: 80px;
+    height: 50px;
+    background: #999999;
+    margin: 10px 0px;
+    border: 0px;
+    border-radius: 4px;
+}
+
 table  {  
     border-collapse: collapse;  
 }  

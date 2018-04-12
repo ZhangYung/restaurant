@@ -12,11 +12,24 @@
 
 <body>
 <?php
-echo "<table width=\"100%\" height=\"100%\">";
+echo "<table width=\"100%\" height=\"100%\" border=\"0\">";
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
+
+$productIdNumDic = array();
+$idCount = count($productIdArray);
+for ($i=0; $i < $idCount; $i++) { 
+	$productId = $productIdArray[$i];
+	if ($productIdNumDic[$productId] == NULL) {
+		$productIdNumDic[$productId] = 1;
+	} else {
+		$productIdNumDic[$productId] = $productIdNumDic[$productId] + 1;
+	}
+}
+
+
 $productsJson = getProductsByIds($productIdArray);
 $products = json_decode($productsJson, TRUE);
 $count = count($products);
@@ -34,22 +47,28 @@ for ($i=0; $i < $count; $i++) {
 
 	echo "<td>";
 	echo "<br>";
-	echo "" . $model->namproductIde . "<br>";
+	echo "" . $model->name . "<br>";
 	echo "" . $model->detail . "<br>";
-	echo "数量：" . $model->number . "<br>";
 	echo "</td>";
 
 	echo "<td>";
-	echo "<form action=\"fastFood.php\" method=\"get\" id=\"form" . $i . "\">";
-	echo "<input type=\"hidden\" name=\"category\" value=\"" . $currentCategory . "\">";
-	echo "<input type=\"hidden\" name=\"addProductId\" value=\"" . $model->productId . "\">";
-	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"添加\">";
-	echo "</form>";
-	// echo "<button class=\"elementButton\" onclick=\"clickAdd(" . $model->productId .")\">添加</button> ";
+	echo "数量：x " . $productIdNumDic[$model->productId] . "<br>";
 	echo "</td>";
 
 	echo " </tr>";
 }
+
+	echo "<tr>";
+	echo "<form action=\"createOrder.php\" method=\"post\" id=\"form1\">";
+	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
+	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
+	echo "</form>";
+	echo "</tr>";
+
+	echo "<tr>";
+	echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
+	echo "</tr>";
+
 echo "</table>";
 ?>
 
