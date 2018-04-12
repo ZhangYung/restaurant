@@ -17,7 +17,7 @@
 	}
 </script>
 <body>
-	<link rel="stylesheet" type="text/html" href="category/fastFood.php">
+	<link rel="stylesheet" type="text/html" href="category/priceBottom.php">
 
 
 
