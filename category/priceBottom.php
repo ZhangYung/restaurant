@@ -4,16 +4,23 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css">
 	<title></title>
 </head>
+
+<script type="text/javascript">
+	function clickCreateOrder() {
+		<?php echo "clickCreateOrder"; ?>
+	}
+</script>
+
 <body>
-	<table border="1">
+	<table border="1" width="100%" height="100%">
 		<tr>
-			<td>
+			<td width="80%">
 				
 <?php
-echo "price";
+echo $_SESSION['purchaseProduct'];
 ?>
 			</td>
-			<td>
+			<td width="20%">
 			<button class="fullSelect" onclick="clickCreateOrder()">下单</button> 
 			</td>
 		</tr>

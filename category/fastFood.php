@@ -1,9 +1,23 @@
+<?php
+	session_start();
+	// $_SESSION['purchaseProducts']=array();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css">
 	<title></title>
 </head>
+
+<script type="text/javascript">
+	function clickAdd(productId) {
+		var producIds = <% session.getAttribute("purchaseProducts") %>;
+		alert(producIds);
+		alert(productId);
+	}
+</script>
+
 <body>
 <?php
 $currentCategory = $_GET["category"];
@@ -31,7 +45,7 @@ for ($i=0; $i < $count; $i++) {
 
 	echo "<td>";
 	echo "<br>";
-	echo "" . $model->name . "<br>";
+	echo "" . $model->namproductIde . "<br>";
 	echo "" . $model->detail . "<br>";
 	echo "剩余：" . $model->number . "<br>";
 	echo "</td>";
@@ -40,7 +54,7 @@ for ($i=0; $i < $count; $i++) {
 	// echo "<form action=\"managerAddProduct.php\" method=\"get\" id=\"form" . $i . "\">";
 	// echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 	// echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
-	echo "<input class=\"elementButton\" type=\"button\" on_click=\"clickAdd()\" value=\"添加\">";
+	echo "<input class=\"elementButton\" type=\"button\" on_click=\"clickAdd(" . $model->productId . ")\" value=\"添加\">";
 	// echo "</form>";
 	echo "</td>";
 

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['purchaseProduct']=array();
+	$_SESSION['purchaseProduct']="016";
 ?>
 
 <!DOCTYPE html>
@@ -10,12 +10,6 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <title>水云居</title>
 </head>
-
-<script type="text/javascript">
-	function clickCreateOrder() {
-		<?php echo "clickCreateOrder"; ?>
-	}
-</script>
 <body>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
@@ -37,14 +31,14 @@
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:70%;">
-		<iframe src="category/fastFood.php?category=1" name="mainContent" frameborder=0 width="100%" height="100%" ></iframe>
+		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="100%" ></iframe>
 		<!-- <?php 
 			// require "category/fastFood.php";
 		?> -->
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:20%;">
-		<iframe src="category/priceBottom.php" name="priceBottom" frameborder=0 width="100%" height="100%" ></iframe>
+		<iframe src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0 width="100%" height="100%" ></iframe>
 	</div>
 
 	<div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
