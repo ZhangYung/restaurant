@@ -21,11 +21,21 @@
 			<td width="80%">
 				
 <?php
-echo "商品";
+echo "已选择 ";
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
-var_dump($productIdArray);
-var_dump(count($productIdArray));
+$productsJson = getProductsByIds($productIdArray);
+$products = json_decode($productsJson, TRUE);
+$count = count($products);
+echo $count . " 个。总价¥：";
+$priceSum = 0;
+for ($i=0; $i < $count; $i++) { 
+	$model = new shopProduct();
+	$subProduct = $products[$i];
+	$model->initWithDic($subProduct);
+	$priceSum = $priceSum + $model->price;
+}
+echo $priceSum;
 ?>
 			</td>
 			<td width="20%">
