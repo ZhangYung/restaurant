@@ -27,7 +27,8 @@ if ($addProductId != NULL) {
 	}
 	$_SESSION["purchaseProducts"] = $orderProductIds;
 	echo $orderProductIds;
-	echo "<script language=\"javascript\"> document.getElementById('priceBottom').contentWindow.location.reload(true);  </script>";
+
+	echo "<script language=\"javascript\"> parent.priceBottom.location.reload(); </script>";
 }
 
 echo "<table width=\"100%\" height=\"100%\">";
