@@ -55,7 +55,7 @@ button.elementButton {
 
 button.elementGrayButton {
     display: block;
-    width: 80px;
+    width: 100px;
     font: normal 14px / 40px '微软雅黑';
     color: #fff;
     text-align: center;

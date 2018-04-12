@@ -59,14 +59,18 @@ for ($i=0; $i < $count; $i++) {
 }
 
 	echo "<tr>";
+	echo "<td>";	
 	echo "<form action=\"createOrder.php\" method=\"post\" id=\"form1\" >";
 	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
 	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
 	echo "</form>";
+	echo "</td>";
 	echo "</tr>";
 
-	echo "<tr><br>";
+	echo "<tr>";
+	echo "<td>";
 	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
+	echo "</td>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
 
