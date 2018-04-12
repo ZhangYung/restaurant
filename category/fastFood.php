@@ -26,6 +26,7 @@ if ($addProductId != NULL) {
 		$orderProductIds = $addProductId;
 	}
 	$_SESSION["purchaseProducts"] = $orderProductIds;
+	echo $orderProductIds;
 }
 
 echo "<table width=\"100%\" height=\"100%\">";
