@@ -65,10 +65,10 @@ for ($i=0; $i < $count; $i++) {
 	echo "</form><br>";
 	echo "</tr><br>";
 
-	echo "<tr><br>";
-	echo "<button class=\"categorySelect\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
+	// echo "<tr><br>";
+	// echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
-	echo "</tr><br>";
+	// echo "</tr><br>";
 
 echo "</table>";
 ?>
