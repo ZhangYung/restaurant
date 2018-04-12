@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['purchaseProduct']="016";
+	$_SESSION["purchaseProducts"]="016";
 ?>
 
 <!DOCTYPE html>

@@ -10,20 +10,22 @@
 	<title></title>
 </head>
 
-<script type="text/javascript">
-	function clickAdd(producId) {
-		alert(producId);
-		var producIds = "<%=session.getAttribute("purchaseProducts")%>";
-		alert(producIds);
-		// alert(productId);
-	}
-</script>
-
 <body>
 <?php
 $currentCategory = $_GET["category"];
 if ($currentCategory == NULL) {
 	$currentCategory = 1;
+}
+
+$addProductId = $_GET["addProductId"];
+if ($addProductId != NULL) {
+	$orderProductIds = $_SESSION["purchaseProducts"];
+	if (strlen($orderProductIds) > 0) {
+		$orderProductIds = $orderProductIds . "," . $addProductId;
+	} else {
+		$orderProductIds = $addProductId;
+	}
+	$_SESSION["purchaseProducts"] = $orderProductIds;
 }
 
 echo "<table width=\"100%\" height=\"100%\">";
@@ -52,11 +54,12 @@ for ($i=0; $i < $count; $i++) {
 	echo "</td>";
 
 	echo "<td>";
-	// echo "<form action=\"managerAddProduct.php\" method=\"get\" id=\"form" . $i . "\">";
-	// echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
-	// echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
-
-	echo "<button class=\"elementButton\" onclick=\"clickAdd(" . $model->productId .")\">添加</button> ";
+	echo "<form action=\"fastFood.php\" method=\"get\" id=\"form" . $i . "\">";
+	echo "<input type=\"hidden\" name=\"category\" value=\"" . $currentCategory . "\">";
+	echo "<input type=\"hidden\" name=\"addProductId\" value=\"" . $model->productId . "\">";
+	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"添加\">";
+	echo "</form>";
+	// echo "<button class=\"elementButton\" onclick=\"clickAdd(" . $model->productId .")\">添加</button> ";
 	echo "</td>";
 
 	echo " </tr>";
