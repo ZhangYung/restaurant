@@ -36,7 +36,7 @@
 		<button class="categorySelect" onclick="clickChooseProductFunction(4)">其他</button> <br><br> -->
 	</div>
 
-	<div id="content" style="width:80%;float:right;height:70%;background:#ff0000;">
+	<div id="content" style="width:80%;float:right;height:70%;">
 		<iframe src="category/fastFood.php?category=1" name="mainContent" frameborder=0 width="100%" ></iframe>
 		<!-- <?php 
 			// require "category/fastFood.php";
