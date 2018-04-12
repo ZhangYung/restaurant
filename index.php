@@ -17,23 +17,10 @@
 	}
 </script>
 <body>
-	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/html" href="category/fastFood.php">
 
 
-<div id="container" style="width: 100%">
-	<div id="header" style="background-color:#FFA500;">
-		<h1 style="text-align:center">水云居</h1>
-	</div>
 
-	<div id="menu">
-		<button onclick="clickChooseProductFunction(1)">美味快餐</button>
-		<button onclick="clickChooseProductFunction(2)">火锅</button>
-		<button onclick="clickChooseProductFunction(3)">饮料</button>
-		<button onclick="clickChooseProductFunction(4)">其他</button>
-		
-	</div>
-
-</div>
 <!-- 
 <frameset rows="85%, 15%">
 	<frameset cols="20%, 80%">
