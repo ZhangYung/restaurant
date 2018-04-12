@@ -15,6 +15,7 @@
 echo "<table width=\"100%\" height=\"100%\" border=\"0\">";
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
+
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
 
@@ -34,6 +35,7 @@ $productsJson = getProductsByIds($productIdArray);
 $products = json_decode($productsJson, TRUE);
 $count = count($products);
 
+//显示页面
 for ($i=0; $i < $count; $i++) { 
 	echo "<tr>";
 	$model = new shopProduct();
@@ -70,6 +72,34 @@ echo "</table>";
 	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
+
+
+//判断是否创建订单
+
+if ($_POST["createOrder"] != NULL) {
+	$priceSum = 0;
+	$sqlProductIdArray = array();
+	$sqlProductNameArray = array();
+	$sqlProductPriceArray = array();
+	$sqlProductNumberArray = array();
+
+	for ($i=0; $i < $count; $i++) { 
+		$model = new shopProduct();
+		$subProduct = $products[$i];
+		$model->initWithDic($subProduct);
+		$priceSum = $priceSum + ($model->price) * $productIdNumDic[$model->productId];
+		$sqlProductIdArray[$i] = $model->productId;
+		$sqlProductNameArray[$i] = $model->name;
+		$sqlProductPriceArray[$i] = $model->price;
+		$sqlProductNumberArray[$i] = $model->number;
+	}
+	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $$sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
+	if ($success) {
+		echo "<script language=\"javascript\"> history.back(1); alert(\"下单成功\") </script>";
+	} else {
+		echo "下单失败，请联系店主，手动下单。";
+	}
+}
 
 ?>
 </body>

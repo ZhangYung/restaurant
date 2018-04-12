@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['eatTableNum'] = isset($_GET["tableNum"]) ? $_GET["tableNum"] : 1;
 ?>
 
 <!DOCTYPE html>
