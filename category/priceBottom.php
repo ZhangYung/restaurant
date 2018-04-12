@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 	function clickCreateOrder() {
-		parent.window.location.href="http://www.baidu.com";
+		parent.window.location.href="createOrder.php";
 	}
 </script>
 
@@ -26,16 +26,28 @@ require $databaseManagerphpPath;
 echo "已选择数量： ";
 $orderProductIds = $_SESSION['purchaseProducts'];
 $productIdArray = explode(",", $orderProductIds);
+$productIdNumDic = array();
+$idCount = count($productIdArray);
+echo $idCount . " 。总价¥：";
+
+for ($i=0; $i < $idCount; $i++) { 
+	$productId = $productIdArray;
+	if ($productIdNumDic[$productId] == NULL) {
+		$productIdNumDic[$productId] = 1;
+	} else {
+		$productIdNumDic[$productId] = $productIdNumDic[$productId] + 1;
+	}
+}
+
 $productsJson = getProductsByIds($productIdArray);
 $products = json_decode($productsJson, TRUE);
 $count = count($products);
-echo $count . " 。总价¥：";
 $priceSum = 0;
 for ($i=0; $i < $count; $i++) { 
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	$priceSum = $priceSum + $model->price;
+	$priceSum = $priceSum + $model->price * $productIdNumDic[$model->productId];
 }
 echo $priceSum;
 ?>
