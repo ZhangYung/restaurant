@@ -25,10 +25,10 @@
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
 		<ul>
-			<li><a href="category/fastFood.php?category=1" target="mainContent">美味快餐</a></li>
-			<li><a href="category/fastFood.php?category=2" target="mainContent">火锅</a></li>
-			<li><a href="category/fastFood.php?category=3" target="mainContent">饮料</a></li>
-			<li><a href="category/fastFood.php?category=4" target="mainContent">其他</a></li>
+			<li><a href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li>
+			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li>
+			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li>
+			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li>
 		</ul>
 		<!-- <button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
@@ -37,7 +37,7 @@
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:70%;">
-		<iframe src="category/fastFood.php?category=1" name="mainContent" ></iframe>
+		<iframe src="category/fastFood.php?category=1" name="mainContent" frameborder=0 ></iframe>
 		<!-- <?php 
 			// require "category/fastFood.php";
 		?> -->

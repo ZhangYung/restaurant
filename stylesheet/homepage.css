@@ -1,5 +1,10 @@
-a.homePageSelectTitle {
-	font-size: 2.6em
+
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
 }
 
 button.managerAdd {
