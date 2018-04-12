@@ -13,6 +13,8 @@
 <script type="text/javascript">
 	function clickAdd(producId) {
 		alert(producId);
+		var producIds = "<%=session.getAttribute("purchaseProducts")%>";
+		alert(producIds);
 		// alert(productId);
 	}
 </script>
