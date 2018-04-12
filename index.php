@@ -19,18 +19,18 @@
 <body>
 
 <div id="container" style="width: 100%; position:absolute;top:0px;bottom:0px;">
-	<div id="header" style="background-color:#FFA500; height: 8%; width: 100%;">
+	<div id="header" style="background-color:#FFA500; height: 10%; width: 100%;">
 		<h1 style="text-align:center">水云居</h1>
 	</div>
 
-	<div id="menu" style="width: 20%; float: left; height: 87%;">
+	<div id="menu" style="width: 20%; float: left; height: 85%;">
 		<button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(3)">饮料</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(4)">其他</button> <br><br>
 	</div>
 
-	<div id="content" style="width: 80%; float: right; height: 90%;">
+	<div id="content" style="width: 80%; float: right; height: 85%;">
 		<?php 
 			require "category/fastFood.php";
 		?>
