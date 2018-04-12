@@ -71,24 +71,5 @@ for ($i=0; $i < $count; $i++) {
 
 echo "</table>";
 ?>
-
-
-
-	<table border="1" width="100%" height="100%">
-		<tr>
-			<td width="80%">
-<?php
-$priceSum = 0;
-for ($i=0; $i < $count; $i++) { 
-	$model = new shopProduct();
-	$subProduct = $products[$i];
-	$model->initWithDic($subProduct);
-	$priceSum = $priceSum + $model->price;
-}
-echo $priceSum;
-?>
-			</td>
-		</tr>
-	</table>
 </body>
 </html>
