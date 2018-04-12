@@ -23,20 +23,26 @@
 		<h1 style="text-align:center">水云居</h1>
 	</div>
 
-	<div id="menu" style="width: 20%; float: left; height: 85%;">
+	<div id="menu" style="width: 20%; float: left; height: 80%;">
 		<button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(3)">饮料</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(4)">其他</button> <br><br>
 	</div>
 
-	<div id="content" style="width: 80%; float: right; height: 85%;">
+	<div id="content" style="width: 80%; float: right; height: 60%;">
 		<?php 
 			require "category/fastFood.php";
 		?>
 	</div>
 
-	<div id="footer" style="text-align: center; height: 5%">
+	<div id="content" style="width: 80%; float: right; height: 20%;">
+		<?php 
+			require "category/priceBottom.php";
+		?>
+	</div>
+
+	<div id="footer" style="text-align: center; height: 10%">
 		版权 ©2017-2018美美餐厅水云居
 	</div>
 
