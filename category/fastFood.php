@@ -54,8 +54,8 @@ for ($i=0; $i < $count; $i++) {
 	// echo "<form action=\"managerAddProduct.php\" method=\"get\" id=\"form" . $i . "\">";
 	// echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 	// echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
-	echo "<input class=\"elementButton\" type=\"button\" on_click=\"clickAdd(" . $model->productId . ")\" value=\"添加\">";
-	// echo "</form>";
+
+	echo "<button class=\"elementButton\" onclick=\"clickAdd(\"sdk\")\">添加</button> "
 	echo "</td>";
 
 	echo " </tr>";

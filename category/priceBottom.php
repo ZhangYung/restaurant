@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
 	function clickCreateOrder() {
-		<?php echo "clickCreateOrder"; ?>
+		alert("down");
 	}
 </script>
 
@@ -17,7 +17,8 @@
 			<td width="80%">
 				
 <?php
-echo $_SESSION['purchaseProduct'];
+echo "商品";
+echo $_SESSION['purchaseProducts'];
 ?>
 			</td>
 			<td width="20%">
