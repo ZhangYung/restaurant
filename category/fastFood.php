@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
+	<title></title>
+</head>
+<body>
 <?php
 $currentCategory = $_GET["category"];
 if ($currentCategory == NULL) {
@@ -41,3 +48,5 @@ for ($i=0; $i < $count; $i++) {
 }
 echo "</table>";
 ?>
+</body>
+</html>
