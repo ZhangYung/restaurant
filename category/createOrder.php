@@ -35,40 +35,40 @@ $products = json_decode($productsJson, TRUE);
 $count = count($products);
 
 for ($i=0; $i < $count; $i++) { 
-	echo "<tr><br>";
+	echo "<tr>";
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	echo "<td><br>";
+	echo "<td>";
 	if ($model->imagePath != NULL) {
 		echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 	}
-	echo "</td><br>";
+	echo "</td>";
 
-	echo "<td><br>";
-	echo "<br><br>";
+	echo "<td>";
+	echo "<br>";
 	echo "" . $model->name . "<br><br>";
 	echo "" . $model->detail . "<br><br>";
-	echo "</td><br>";
+	echo "</td>";
 
-	echo "<td><br>";
+	echo "<td>";
 	echo "数量：x " . $productIdNumDic[$model->productId] . "<br>";
-	echo "</td><br>";
+	echo "</td>";
 
-	echo " </tr><br>";
+	echo " </tr>";
 }
 
-	echo "<tr><br>";
-	echo "<form action=\"createOrder.php\" method=\"post\" id=\"form1\" ><br>";
-	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\"><br>";
-	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\"><br>";
-	echo "</form><br>";
-	echo "</tr><br>";
+	echo "<tr>";
+	echo "<form action=\"createOrder.php\" method=\"post\" id=\"form1\" >";
+	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
+	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
+	echo "</form>";
+	echo "</tr>";
 
-	// echo "<tr><br>";
-	// echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
+	echo "<tr><br>";
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
-	// echo "</tr><br>";
+	echo "</tr><br>";
 
 echo "</table>";
 ?>
