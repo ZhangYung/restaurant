@@ -42,7 +42,7 @@
 		?>
 	</div>
 
-	<div id="footer" style="text-align: center; height: 10%">
+	<div id="footer" style="text-align: center; height: 10%; width: 100%; float: left;">
 		版权 ©2017-2018美美餐厅水云居
 	</div>
 
