@@ -98,7 +98,7 @@ if ($_POST["createOrder"] != NULL) {
 		$_SESSION['purchaseProducts'] = NULL;
 		echo "<script language=\"javascript\" >alert(\"下单成功\"); history.go(-2); </script>";
 	} else {
-		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.go(-1); </script>";
+		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.go(-1); window.location.reload(); </script>";
 	}
 }
 
