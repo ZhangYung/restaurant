@@ -40,6 +40,7 @@
 	}
 	echo "</td>";
 	echo "<td width=20%>";
+	date_default_timezone_set("Asia/Shanghai");
 	echo $tableNum . "号" . $seatNum . "座" . "<br>创建时间：" . date("H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 	$priceSum = $priceSum + $model->totalPrice;
 	echo "</td>";
