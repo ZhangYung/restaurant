@@ -38,7 +38,7 @@
 
 				echo "<td>";
 				date_default_timezone_set("Asia/Shanghai");
-				echo $model->tableNum . "号" . $model->seatNum . "座" . "<br>创建时间：" . date("H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
+				echo $model->tableNum . "号" . $model->seatNum . "座" . "<br>创建时间：" . date("y/m/d H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 				echo "</td>";
 
 				echo "<td>";
