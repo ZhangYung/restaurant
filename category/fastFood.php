@@ -50,7 +50,7 @@ for ($i=0; $i < $count; $i++) {
 
 	echo "<td>";
 	echo "<br>";
-	echo "" . $model->namproductIde . "<br>";
+	echo "" . $model->name . "<br>";
 	echo "" . $model->detail . "<br>";
 	echo "剩余：" . $model->number . "<br>";
 	echo "</td>";

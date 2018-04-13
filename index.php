@@ -12,6 +12,11 @@
 <title>水云居</title>
 </head>
 <body>
+	<?php 
+	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
+	require $databaseManagerphpPath;
+	checkAndCreateTable($meimeiShopOrderTable);
+	?>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
 	<div id="header" style="height: 60px; width: 100%;">
