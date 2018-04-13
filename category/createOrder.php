@@ -91,9 +91,9 @@ if ($_GET["createOrder"] != NULL) {
 		$sqlProductIdArray[$i] = $model->productId;
 		$sqlProductNameArray[$i] = $model->name;
 		$sqlProductPriceArray[$i] = $model->price;
-		$sqlProductNumberArray[$i] = $model->number;
+		$sqlProductNumberArray[$i] = $productIdNumDic[$model->productId];
 	}
-	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $$sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
+	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
 		$_SESSION['purchaseProducts'] = NULL;
 		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php')</script>";
