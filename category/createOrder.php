@@ -93,7 +93,6 @@ if ($_GET["createOrder"] != NULL) {
 		$sqlProductPriceArray[$i] = $model->price;
 		$sqlProductNumberArray[$i] = $productIdNumDic[$model->productId];
 	}
-	echo $_SESSION['eatSeatNum'];
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
 		$_SESSION['purchaseProducts'] = NULL;
