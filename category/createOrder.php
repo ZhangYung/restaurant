@@ -62,9 +62,9 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
-	echo "<form method=\"post\" id=\"form1\" onSubmit=\"javascript:history.back();\">";
+	echo "<form method=\"post\" id=\"form1\">";
 	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
-	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
+	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\" onclick=\"location.replace('createOrder')\">";
 	echo "</form>";
 	echo "<br>";
 	echo "<br>";
