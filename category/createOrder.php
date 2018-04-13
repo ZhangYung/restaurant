@@ -96,7 +96,7 @@ if ($_GET["createOrder"] != NULL) {
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
 		$_SESSION['purchaseProducts'] = NULL;
-		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php')</script>";
+		// echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php')</script>";
 	} else {
 		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); location.replace('../index.php');</script>";
 	}
