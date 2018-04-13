@@ -13,7 +13,6 @@
 	function clickCreateOrder() {
 		parent.window.location.href="createOrder.php";
 	}
-	location.reload();
 </script>
 
 <body>
