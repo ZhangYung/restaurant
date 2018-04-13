@@ -12,7 +12,7 @@
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$ordersJson = getOrders(NULL, NULL, $currentState);
-			$orders = json_decode(ordersJson, TRUE);
+			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
 			var_dump($orders);
 			for ($i=0; $i < $count; $i++) { 
