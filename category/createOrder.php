@@ -7,7 +7,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css">
-	<title></title>
+	<title>水云居</title>
 </head>
 
 <body>
