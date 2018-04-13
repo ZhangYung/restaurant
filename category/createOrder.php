@@ -62,10 +62,10 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
-	echo "<form method=\"post\" id=\"form1\">";
-	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
-	echo "<input class=\"elementButton\" type=\"button\" name=\"submit\" value=\"确定下单\" onClick=\"location.replace('createOrder.php')\">";
-	echo "</form>";
+	// echo "<form method=\"post\" id=\"form1\">";
+	// echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
+	echo "<input class=\"elementButton\" type=\"button\" name=\"submit\" value=\"确定下单\" onClick=\"location.replace('createOrder.php?createOrder=\"createOrder\"')\">";
+	// echo "</form>";
 	echo "<br>";
 	echo "<br>";
 
@@ -76,7 +76,7 @@ echo "</table>";
 
 //判断是否创建订单
 
-if ($_POST["createOrder"] != NULL) {
+if ($_GET["createOrder"] != NULL) {
 	$priceSum = 0;
 	$sqlProductIdArray = array();
 	$sqlProductNameArray = array();
