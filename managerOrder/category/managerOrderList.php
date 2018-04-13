@@ -6,11 +6,17 @@
 </head>
 <body>
 		<?php
-			echo "<table class=\"table\">";
-			$currentState = $_GET["state"];
-
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
+			
+			echo "<table class=\"table\">";
+			$currentState = $_GET["state"];
+			$changeState = $_GET["changeState"];
+			$changeOrderid = $_GET["orderId"];
+			if ($changeOrderid != NULL) {
+				addOrEditOrder($changeOrderid, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $changeState);
+			}
+
 			$ordersJson = getOrders(NULL, NULL, $currentState);
 			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
@@ -41,7 +47,7 @@
 				} elseif ($currentState == 2) {
 					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
 
-					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
+					echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
 				}
 				echo "</td>";
 

@@ -26,6 +26,20 @@ button.managerAdd {
     border-radius: 4px;
 }
 
+button.elementGrayButton {
+    display: block;
+    width: 120px;
+    font: normal 14px / 40px '微软雅黑';
+    color: #fff;
+    text-align: center;
+    margin: 10px 0px;
+    border: 0px;
+    background: #aaaaaa;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+}
+
 button.elementButton {
     display: block;
     width: 120px;
