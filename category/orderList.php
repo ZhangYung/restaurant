@@ -36,11 +36,11 @@
 	$productNumbersArray = explode(",", $model->productNumbers);
 	$productCount = count($productNameArray);
 	for ($j=0; $j < $productCount; $j++) { 
-		echo $productNameArray[$j] . " (" . $productPriceArray[$j] . ") " . "x " . $productNumbersArray[$j] . "<br>";
+		echo $productNameArray[$j] . " (" . $productPriceArray[$j] . ") " . "x ¥" . $productNumbersArray[$j] . "<br>";
 	}
 	echo "</td>";
 	echo "<td width=20%>";
-	echo $tableNum . "号" . $seatNum . "座" . "<br>创建时间：" . $model->createData . "<br>总价：" . $model->totalPrice;
+	echo $tableNum . "号" . $seatNum . "座" . "<br>创建时间：" . date("H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 	$priceSum = $priceSum + $model->totalPrice;
 	echo "</td>";
 	echo "</tr>";
@@ -48,7 +48,7 @@
 
 	echo "<tr>";
 	echo "<td width=\"100%\">";
-	echo $tableNum . " 号" . "总价：" . $priceSum;
+	echo $tableNum . " 号" . "总价¥：" . $priceSum;
 	echo "</td>";
 	echo "</tr>";
 
