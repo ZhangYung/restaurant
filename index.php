@@ -13,7 +13,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	window.onload = function () {
+	// window.onload = function () {
 		 var data = sessionStorage.getItem("FirstLoad");
 	     if (data) {
 	          if (data == "0") {
@@ -24,7 +24,7 @@
 	　　　} else {
 	　　　　　sessionStorage.setItem("FirstLoad","1");
 	　　　}
-	}
+	// }
 </script>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
