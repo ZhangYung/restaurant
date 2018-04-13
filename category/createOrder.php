@@ -62,7 +62,7 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
-	echo "<form method=\"post\" id=\"form1\" action=\"location.replace('createOrder.php')\">";
+	echo "<form method=\"post\" id=\"form1\" onSubmit=\"location.replace('createOrder.php')\">";
 	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
 	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
 	echo "</form>";
