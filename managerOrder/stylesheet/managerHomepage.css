@@ -28,7 +28,7 @@ button.managerAdd {
 
 button.elementButton {
     display: block;
-    width: 80px;
+    width: 120px;
     font: normal 14px / 40px '微软雅黑';
     color: #fff;
     text-align: center;
@@ -42,7 +42,7 @@ button.elementButton {
 
 input.elementButton {
     color: #fff;
-    width: 80px;
+    width: 120px;
     height: 50px;
     background: #ff6161;
     margin: 10px 0px;

@@ -14,7 +14,6 @@
 			$ordersJson = getOrders(NULL, NULL, $currentState);
 			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
-			var_dump($orders);
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr>";
 				echo "<td>";
@@ -36,6 +35,7 @@
 				echo $model->tableNum . "号" . $model->seatNum . "座" . "<br>创建时间：" . date("H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 				echo "</td>";
 
+				echo "<td>";
 				if ($currentState == 1) {
 					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
 				} elseif ($currentState == 2) {
@@ -43,6 +43,7 @@
 
 					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
 				}
+				echo "</td>";
 
 				echo "</tr>";
 			}
