@@ -32,9 +32,6 @@
 
 	<div id="content" style="width:80%;float:right;height:70%;">
 		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="100%" ></iframe>
-		<!-- <?php 
-			// require "category/fastFood.php";
-		?> -->
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:20%;">

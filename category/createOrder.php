@@ -95,7 +95,7 @@ if ($_POST["createOrder"] != NULL) {
 	}
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $$sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
-		echo "<script language=\"javascript\" > parent.window.history.back(); alert(\"下单成功\");</script>";
+		echo "<script language=\"javascript\" >alert(\"下单成功\"); history.back(1); </script>";
 	} else {
 		echo "下单失败，请联系店主，手动下单。";
 	}
