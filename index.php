@@ -30,6 +30,7 @@
 			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
 			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
 			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
+			<li><a href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
 		</ul>
 		<!-- <button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
