@@ -6,8 +6,6 @@
 </head>
 <body>
 		<?php
-			
-
 			echo "<table class=\"table\">";
 			$currentState = $_GET["state"];
 
@@ -16,6 +14,7 @@
 			$ordersJson = getOrders(NULL, NULL, $currentState);
 			$orders = json_decode(ordersJson, TRUE);
 			$count = count($orders);
+			var_dump($orders);
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr>";
 				echo "<td>";
