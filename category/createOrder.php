@@ -64,7 +64,7 @@ echo "</table>";
 	echo "<br>";
 	// echo "<form method=\"post\" id=\"form1\">";
 	// echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
-	echo "<input class=\"elementButton\" type=\"button\" name=\"submit\" value=\"确定下单\" onClick=\"javascript:location.replace('createOrder.php?createOrder=\"createOrder\"')\">";
+	echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('createOrder.php?createOrder=\"createOrder\"')\">下单</button>";
 	// echo "</form>";
 	echo "<br>";
 	echo "<br>";
