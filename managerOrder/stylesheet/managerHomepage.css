@@ -28,7 +28,7 @@ button.managerAdd {
 
 button.elementGrayButton {
     display: block;
-    width: 120px;
+    width: 150px;
     font: normal 14px / 40px '微软雅黑';
     color: #fff;
     text-align: center;
@@ -42,7 +42,7 @@ button.elementGrayButton {
 
 button.elementButton {
     display: block;
-    width: 120px;
+    width: 150px;
     font: normal 14px / 40px '微软雅黑';
     color: #fff;
     text-align: center;
