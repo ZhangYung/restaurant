@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <title>水云居</title>
 </head>
-<body onload="opener.location.reload()">
+<body>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
 	<div id="header" style="height: 60px; width: 100%;">
