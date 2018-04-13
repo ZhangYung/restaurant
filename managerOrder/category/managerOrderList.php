@@ -8,7 +8,7 @@
 		<?php
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
-			
+
 			echo "<table class=\"table\">";
 			$currentState = $_GET["state"];
 			$changeState = $_GET["changeState"];
@@ -47,7 +47,9 @@
 				} elseif ($currentState == 2) {
 					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
 
-					echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
+					echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
+				} elseif ($currentState == 3) {
+					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">完成收款</button>";
 				}
 				echo "</td>";
 
