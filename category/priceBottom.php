@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 	function clickCreateOrder() {
-		parent.window.location.href="createOrder.php";
+		parent.window.location.replace('createOrder.php');
 	}
 
 	// function myrefresh()  { 

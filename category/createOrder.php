@@ -69,7 +69,7 @@ echo "</table>";
 	echo "<br>";
 	echo "<br>";
 
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back();\">返回再选选</button> <br><br>";
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php');\">返回再选选</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
 
@@ -98,7 +98,7 @@ if ($_GET["createOrder"] != NULL) {
 		$_SESSION['purchaseProducts'] = NULL;
 		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php')</script>";
 	} else {
-		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.back();</script>";
+		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); location.replace('../index.php');</script>";
 	}
 }
 
