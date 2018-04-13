@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$_SESSION['eatTableNum'] = isset($_GET["tableNum"]) ? $_GET["tableNum"] : 1;
+	$_SESSION['eatseatNum'] = isset($_GET["seatNum"]) ? $_GET["seatNum"] : 1;
 ?>
 
 <!DOCTYPE html>
