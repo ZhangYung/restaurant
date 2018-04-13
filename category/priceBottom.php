@@ -25,6 +25,7 @@ require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
 echo "已选择数量： ";
 $orderProductIds = $_SESSION['purchaseProducts'];
+echo $orderProductIds;
 $productIdArray = explode(",", $orderProductIds);
 $productIdNumDic = array();
 $idCount = count($productIdArray);

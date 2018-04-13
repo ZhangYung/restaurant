@@ -62,7 +62,7 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
-	echo "<form method=\"post\" id=\"form1\" >";
+	echo "<form method=\"post\" id=\"form1\" target=\"_blank\">";
 	echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
 	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"确定下单\">";
 	echo "</form>";
@@ -95,9 +95,11 @@ if ($_POST["createOrder"] != NULL) {
 	}
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $$sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
-		echo "<script language=\"javascript\" >alert(\"下单成功\"); </script>";
+		$_SESSION['purchaseProducts'];
+		echo "<script language=\"javascript\"> parent.priceBottom.location.reload(); </script>";
+		echo "<script language=\"javascript\" >alert(\"下单成功\"); history.back(2); </script>";
 	} else {
-		echo "下单失败，请联系店主，手动下单。";
+		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.back(1); </script>";
 	}
 }
 
