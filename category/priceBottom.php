@@ -5,10 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
-	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
-	<meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
-	<meta HTTP-EQUIV="expires" CONTENT="0">
 	<link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css">
 	<title></title>
 </head>
