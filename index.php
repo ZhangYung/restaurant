@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <title>水云居</title>
 </head>
