@@ -69,7 +69,7 @@ echo "</table>";
 	echo "<br>";
 	echo "<br>";
 
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.back(1);\">返回再选选</button> <br><br>";
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:history.go(-1);\">返回再选选</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
 
@@ -95,11 +95,10 @@ if ($_POST["createOrder"] != NULL) {
 	}
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $$sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
-		$_SESSION['purchaseProducts'];
-		echo "<script language=\"javascript\"> parent.priceBottom.location.reload(); </script>";
-		echo "<script language=\"javascript\" >alert(\"下单成功\"); history.back(2); </script>";
+		$_SESSION['purchaseProducts'] = "";
+		echo "<script language=\"javascript\" >alert(\"下单成功\"); history.go(-2); </script>";
 	} else {
-		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.back(1); </script>";
+		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); history.go(-1); </script>";
 	}
 }
 
