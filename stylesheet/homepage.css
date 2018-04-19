@@ -11,6 +11,10 @@ li a {
     text-decoration: none;
 }
 
+a.leftLink {
+    font: normal 30px / 80px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
