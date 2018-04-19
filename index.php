@@ -29,12 +29,6 @@ $(document).ready(function()
 <title>水云居</title>
 
 </head>
-<body>
-	<?php 
-	require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
-	require $databaseManagerphpPath;
-	checkAndCreateTable($meimeiShopOrderTable);
-	?>
 
 <frameset rows="70%, 30%" frameBorder="0">	
 <frameset cols="20%, 80%" frameBorder="0">
@@ -44,7 +38,6 @@ $(document).ready(function()
 		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0>
 </frameset>
 
-</body>
 </html>
 
 
