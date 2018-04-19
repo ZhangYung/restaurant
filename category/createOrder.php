@@ -23,19 +23,12 @@ $productIdNumDic = array();
 $idCount = count($productIdArray);
 
 $deleteProductId = $_GET["deleteProductId"];
-echo $deleteProductId;
-echo "<br>";
 if ($deleteProductId != NULL) {
 	for ($i=0; $i < $idCount; $i++) { 
 		$productId = $productIdArray[$i];
 		if ($productId == $deleteProductId) {
-			var_dump($productIdArray);
-echo "<br>";
-			array_splice($productIdArray, 0);
-			var_dump($productIdArray);
-echo "<br>";
+			array_splice($productIdArray, $i, 1);
 			$_SESSION['purchaseProducts'] = implode(",", $productIdArray);
-			echo $_SESSION['purchaseProducts'];
 			break;
 		}
 	}
