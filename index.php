@@ -12,12 +12,12 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	$("li").click(function(){
+	$("a").click(function(){
 		alert("alert");
 		var index = $(this).index();
 		$(this)
         .addClass("selected")
-        .siblings("li") 
+        .siblings("a") 
         .removeClass("selected"); 
 	});
 </script>
@@ -38,7 +38,7 @@
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
 		<ul>
-			<li><a id="leftLink" class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;" onclick="">美味快餐</a></li><br>
+			<li><a id="leftLink" class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a id="leftLink" href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
 			<li><a id="leftLink" href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
 			<li><a id="leftLink" href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>

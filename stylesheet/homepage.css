@@ -11,7 +11,7 @@ a:hover {color:#00ff00;}
 
 a:active {color:#ff0000;}
 
-a.selected {
+.selected {
     background-color: #4CAF50;
     color: white;
 }
