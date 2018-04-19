@@ -15,7 +15,6 @@
 $(document).ready(function()
   {
 	$("a").click(function(){
-		alert("alert");
 		var index = $(this).index();
 		$(this)
         .addClass("selected")
