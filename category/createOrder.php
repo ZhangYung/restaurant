@@ -23,6 +23,7 @@ $productIdNumDic = array();
 $idCount = count($productIdArray);
 
 $deleteProductId = $_GET["deleteProductId"];
+echo $deleteProductId;
 if ($deleteProductId != NULL) {
 	for ($i=0; $i < $idCount; $i++) { 
 		$productId = $productIdArray[$i];
@@ -32,6 +33,7 @@ if ($deleteProductId != NULL) {
 		}
 	}
 	$_SESSION['purchaseProducts'] = implode(",", $productIdArray);
+	echo $_SESSION['purchaseProducts'];
 }
 
 $idCount = count($productIdArray);
@@ -72,7 +74,7 @@ for ($i=0; $i < $count; $i++) {
 	echo "</td>";
 
 	echo "<td>";
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">全部清空</button> <br><br>";
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">删除一份</button> <br><br>";
 	echo "</td>";
 
 	echo " </tr>";
