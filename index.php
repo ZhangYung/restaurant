@@ -36,16 +36,13 @@ $(document).ready(function()
 	checkAndCreateTable($meimeiShopOrderTable);
 	?>
 
-
-
 <frameset rows="70%, 30%" cols="*" frameBorder="0">	
 <frameset cols="20%, 80%" frameBorder="0">
-		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 ></iframe>
-		<frame src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 scrolling="yes" ></iframe>
+		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 >
+		<frame src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 scrolling="yes" >
 </frameset>
-		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0></iframe>
+		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0>
 </frameset>
-
 
 </body>
 </html>
