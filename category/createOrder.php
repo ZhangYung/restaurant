@@ -69,7 +69,9 @@ echo "</table>";
 	echo "<br>";
 	echo "<br>";
 
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php');\">返回再选选</button> <br><br>";
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">返回再选选</button> <br><br>";
+
+	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php?action=clearProduct&seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">全部清空</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
 
@@ -97,7 +99,7 @@ if ($_GET["createOrder"] != NULL) {
 	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 	if ($success) {
 		$_SESSION['purchaseProducts'] = NULL;
-		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php')</script>";
+		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "')</script>";
 	} else {
 		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); location.replace('../index.php');</script>";
 	}

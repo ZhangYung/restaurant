@@ -1,7 +1,10 @@
 <?php
 	session_start();
-	$_SESSION['eatTableNum'] = isset($_GET["tableNum"]) ? $_GET["tableNum"] : 2;
-	$_SESSION['eatSeatNum'] = isset($_GET["seatNum"]) ? $_GET["seatNum"] : 2;
+	$_SESSION['eatTableNum'] = isset($_GET["tableNum"]) ? $_GET["tableNum"] : -1;
+	$_SESSION['eatSeatNum'] = isset($_GET["seatNum"]) ? $_GET["seatNum"] : -1;
+	if ($_GET["action"] == "clearProduct") {
+		$_SESSION['purchaseProducts'] = "";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +42,6 @@ $(document).ready(function()
 	</div>
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
-
 		<ul>
 			<li ><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>

@@ -63,7 +63,7 @@ echo $priceSum;
 ?>
 			</td>
 			<td width="20%">
-			<button class="fullSelect" onclick="clickCreateOrder()">下单</button> 
+			<button class="fullSelect" onclick="clickCreateOrder()">订单详情</button> 
 			</td>
 		</tr>
 	</table>
