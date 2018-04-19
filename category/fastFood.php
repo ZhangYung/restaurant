@@ -52,7 +52,7 @@ for ($i=0; $i < $count; $i++) {
 	echo "<br>";
 	echo "<p>" . $model->name . "</p>";
 	echo "<p>" . $model->detail . "</p>";
-	echo "<p>剩余dasfijasdkfjsadkljfklasdjfkdsajkfjaadsfsafasdslkfjlkdsladsjfkldsaljkdsa电视卡：" . $model->number . "</p>";
+	echo "<p>剩余大家好风景啊上飞机啊是倒海翻江撒的发挥空间啊摔大家复活节卡萨恢复健康的撒胡椒粉的撒谎尽快发货的撒娇空腹喝点洒健康四大佛教萨的减肥哈是多久开发和科技啊摔电视卡：" . $model->number . "</p>";
 	echo "<br>";
 	echo "</td>";
 
