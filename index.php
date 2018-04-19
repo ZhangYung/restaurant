@@ -14,11 +14,11 @@
 <script type="text/javascript">
 $(document).ready(function()
   {
-	$("a").click(function(){
+	$("ul li").click(function(){
 		var index = $(this).index();
 		$(this)
         .addClass("selected")
-        .siblings("a") 
+        .siblings("li") 
         .removeClass("selected"); 
 	});
 });
@@ -41,11 +41,11 @@ $(document).ready(function()
 	<div id="menu" style="width:20%;float:left;height:90%;">
 
 		<ul>
-			<li><a id="leftLink" class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
-			<li><a id="leftLink" href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
-			<li><a id="leftLink" href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
-			<li><a id="leftLink" href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
-			<li><a id="leftLink" href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
+			<li class="selected"><a href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
+			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
+			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
+			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
+			<li><a href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
 		</ul>
 		<!-- <button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
