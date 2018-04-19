@@ -31,7 +31,7 @@ if ($deleteProductId != NULL) {
 		if ($productId == $deleteProductId) {
 			var_dump($productIdArray);
 echo "<br>";
-			array_splice($productIdArray, i, 1);
+			array_splice($productIdArray, 0);
 			var_dump($productIdArray);
 echo "<br>";
 			$_SESSION['purchaseProducts'] = implode(",", $productIdArray);
