@@ -10,6 +10,16 @@
 <meta charset="utf-8">
 <META HTTP-EQUIV="pragma" CONTENT="no-cache">
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
+<script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$('ul li').click(function(){
+		var index = $(this).index();
+		$(this)
+        .addClass('active') // 给当前li加上.active
+        .siblings('li') // 选中同一级其他的li
+        .removeClass('active'); // 给同一级其他li去除.active
+	});
+</script>
 <title>水云居</title>
 
 </head>
@@ -55,22 +65,6 @@
 
 </body>
 </html>
-<script type="text/javascript">
-	var linkArray = document.getElementById('leftLink');
-	for (var i = 0; i < linkArray.length; i++) {
-		var link = linkArray[i];
-		link.onclick = function () {
-			for (var j = 0; j < linkArray.length; j++) {
-				var subLink = linkArray[j];
-				if (i == j) {
-					subLink.className = 'selected';
-				} else {
-					subLink.className = '';
-				}
-			}
-		}
-	}
-</script>
 
 
 
