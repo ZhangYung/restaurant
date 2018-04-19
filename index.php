@@ -42,22 +42,17 @@ $(document).ready(function()
 	</div>
  -->
 	<div id="menu" style="width:20%;float:left;height:100%;">
-		<ul>
-			<li ><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
-			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
-			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
-			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
-			<li><a href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
-		</ul>
+		<iframe src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 width="100%" height="100%" ></iframe>
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:100%;">
-		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="70%" scrolling="yes" ></iframe>
 		<iframe src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0 width="100%" height="30%" ></iframe>
+
+		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="70%" scrolling="yes" ></iframe>
 	</div>
 
 	<!-- <div id="content" style="width:80%;float:right;height:20%;">
-	 --></div>
+	 </div>-->
 
 	<!-- <div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
 		Copyright ©2017-2018水云居
