@@ -42,9 +42,9 @@ for ($i=0; $i < $count; $i++) {
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	echo "<td >";
+	echo "<td type=\"width:80px; height:80px;\">";
 	if ($model->imagePath != NULL) {
-		echo "<img type=\"width:80px; height:80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+		echo "<img type=\"width:80px; height:80px; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 	}
 	echo "</td>";
 
