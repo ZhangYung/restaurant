@@ -37,11 +37,11 @@ $(document).ready(function()
 	?>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;height:100%">
-	<div id="header" style="height: 60px; width: 100%;">
+	<!-- <div id="header" style="height: 60px; width: 100%;">
 		<h1 style="text-align:center">水云居</h1>
 	</div>
-
-	<div id="menu" style="width:20%;float:left;height:90%;">
+ -->
+	<div id="menu" style="width:20%;float:left;height:100%;">
 		<ul>
 			<li ><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
@@ -49,23 +49,19 @@ $(document).ready(function()
 			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
 			<li><a href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
 		</ul>
-		<!-- <button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
-		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
-		<button class="categorySelect" onclick="clickChooseProductFunction(3)">饮料</button> <br><br>
-		<button class="categorySelect" onclick="clickChooseProductFunction(4)">其他</button> <br><br> -->
 	</div>
 
-	<div id="content" style="width:80%;float:right;height:70%;">
-		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="200" height="200" scrolling="yes" ></iframe>
+	<div id="content" style="width:80%;float:right;height:100%;">
+		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="70%" scrolling="yes" ></iframe>
+		<iframe src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0 width="100%" height="30%" ></iframe>
 	</div>
 
-	<div id="content" style="width:80%;float:right;height:20%;">
-		<iframe src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0 width="100%" height="100%" ></iframe>
-	</div>
+	<!-- <div id="content" style="width:80%;float:right;height:20%;">
+	 --></div>
 
-	<div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
+	<!-- <div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
 		Copyright ©2017-2018水云居
-	</div>
+	</div> -->
 
 </div>
 
