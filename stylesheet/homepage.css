@@ -107,11 +107,7 @@ p {
 table  {  
     border-collapse: collapse;  
 }  
-table td, table th  {  
-    margin: 10px 10px 10px 10px;
-    border: 1px solid #cad9ea;  
-    color: #666;   
-}  
+
 table tr:nth-child(odd)  {  
     background: #fff;  
 }  
