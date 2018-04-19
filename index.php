@@ -20,9 +20,6 @@ $(document).ready(function()
 		$(this)
 		.children("a")
         .addClass("selected");
-        // .siblings("li") 
-        // .children("a")
-        // .removeClass("selected"); 
 	});
 });
 </script>
@@ -36,12 +33,12 @@ $(document).ready(function()
 	checkAndCreateTable($meimeiShopOrderTable);
 	?>
 
-<div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
+<div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;height:100%">
 	<div id="header" style="height: 60px; width: 100%;">
 		<h1 style="text-align:center">水云居</h1>
 	</div>
 
-	<div id="menu" style="width:20%;float:left;height:90%;">
+	<div id="menu" style="width:20%;float:left;height:90%;background-color: red">
 
 		<ul>
 			<li><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
