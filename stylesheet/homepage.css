@@ -1,17 +1,5 @@
 
-a:link {
-    color: #000000;
-}
-
-a:visited {
-    color: #000000;
-}
-
-a:hover {color:#00ff00;}
-
-a:active {color:#ff0000;}
-
-.selected {
+a.selected {
     background-color: #4CAF50;
     color: white;
 }
