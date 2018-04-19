@@ -42,17 +42,17 @@ for ($i=0; $i < $count; $i++) {
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	echo "<td style=\"width:80px; height:80px;\">";
+	echo "<td style=\"width:140px; height:140px;\">";
 	if ($model->imagePath != NULL) {
-		echo "<img style=\"width:80px; height:80px; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+		echo "<img style=\"width:100%; height:100%; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 	}
 	echo "</td>";
 
 	echo "<td>";
 	echo "<br>";
-	echo "" . $model->name . "<br>";
-	echo "" . $model->detail . "<br>";
-	echo "剩余：" . $model->number . "<br>";
+	echo "<p>" . $model->name . "</p>";
+	echo "<p>" . $model->detail . "</p>";
+	echo "<p>剩余：" . $model->number . "</p>";
 	echo "<br>";
 	echo "</td>";
 
