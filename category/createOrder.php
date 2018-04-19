@@ -29,11 +29,11 @@ if ($deleteProductId != NULL) {
 		$productId = $productIdArray[$i];
 		if ($productId == $deleteProductId) {
 			array_splice($productIdArray, i, 1);
+			$_SESSION['purchaseProducts'] = implode(",", $productIdArray);
+			echo $_SESSION['purchaseProducts'];
 			break;
 		}
 	}
-	$_SESSION['purchaseProducts'] = implode(",", $productIdArray);
-	echo $_SESSION['purchaseProducts'];
 }
 
 $idCount = count($productIdArray);
