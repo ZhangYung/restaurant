@@ -48,7 +48,7 @@ for ($i=0; $i < $count; $i++) {
 	}
 	echo "</td>";
 
-	echo "<td>";
+	echo "<td style=\"height:140px;\">";
 	echo "<br>";
 	echo "<p>" . $model->name . "</p>";
 	echo "<p>" . $model->detail . "</p>";
