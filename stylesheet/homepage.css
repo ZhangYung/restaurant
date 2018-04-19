@@ -66,27 +66,27 @@ button.elementButton {
 button.elementGrayButton {
     display: block;
     width: 100px;
-    font: normal 30px / 40px '微软雅黑';
     color: #fff;
-    text-align: center;
-    margin: 10px 0px;
-    border: 0px;
     background: #aaaaaa;
     cursor: pointer;
     outline: none;
+    margin: 10px 0px;
+    border: 0px;
     border-radius: 4px;
+    text-align: center;
+    font: normal 30px / 40px '微软雅黑';
 }
 
 input.elementButton {
     color: #fff;
     width: 100px;
-    height: 50px;
+    height: 80px;
     background: #ff6161;
     margin: 10px 0px;
     border: 0px;
     border-radius: 4px;
     text-align: center;
-    font: normal 30px / 40px '微软雅黑';
+    font-size: 40px;
 }
 
 input.elementGrayButton {
