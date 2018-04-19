@@ -52,7 +52,7 @@ for ($i=0; $i < $count; $i++) {
 	echo "<br>";
 	echo "<p>" . $model->name . "</p>";
 	echo "<p>" . $model->detail . "</p>";
-	echo "<p>剩余：" . $model->number . "</p>";
+	echo "<p>剩余dasfijasdkfjsadkljfklasdjfkdsajkfjaadsfsafasdslkfjlkdsladsjfkldsaljkdsa电视卡：" . $model->number . "</p>";
 	echo "<br>";
 	echo "</td>";
 
