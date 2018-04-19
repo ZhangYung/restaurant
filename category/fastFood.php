@@ -42,13 +42,13 @@ for ($i=0; $i < $count; $i++) {
 	$model = new shopProduct();
 	$subProduct = $products[$i];
 	$model->initWithDic($subProduct);
-	echo "<td style=\"width:30%; height:140px;\">";
+	echo "<td style=\"width:30%;min-height:140px\">";
 	if ($model->imagePath != NULL) {
-		echo "<img style=\"width:100%; height:100%; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+		echo "<img style=\"width:140px; height:140px; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 	}
 	echo "</td>";
 
-	echo "<td style=\"width:50%;height:140px;\">";
+	echo "<td style=\"width:50%;min-height:140px\">";
 	echo "<br>";
 	echo "<p>" . $model->name . "</p>";
 	echo "<p>" . $model->detail . "</p>";
@@ -56,13 +56,12 @@ for ($i=0; $i < $count; $i++) {
 	echo "<br>";
 	echo "</td>";
 
-	echo "<td style=\"width:20%;height:140px;\">";
+	echo "<td style=\"width:20%;min-height:140px\">";
 	echo "<form action=\"fastFood.php\" method=\"get\" id=\"form" . $i . "\">";
 	echo "<input type=\"hidden\" name=\"category\" value=\"" . $currentCategory . "\">";
 	echo "<input type=\"hidden\" name=\"addProductId\" value=\"" . $model->productId . "\">";
 	echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"+\">";
 	echo "</form>";
-	// echo "<button class=\"elementButton\" onclick=\"clickAdd(" . $model->productId .")\">添加</button> ";
 	echo "</td>";
 
 	echo " </tr>";
