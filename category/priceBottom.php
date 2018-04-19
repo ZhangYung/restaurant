@@ -11,12 +11,13 @@
 
 <body>
 	<table border="1" width="100%" height="100%">
-		<tr>
+		<tr height="100%">
 			<td width="80%">
 				
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 require $databaseManagerphpPath;
+echo "<p>";
 echo "已选择数量： ";
 $orderProductIds = $_SESSION['purchaseProducts'];
 if (strlen($orderProductIds) > 0) {
@@ -49,6 +50,7 @@ for ($i=0; $i < $count; $i++) {
 	$priceSum = $priceSum + ($model->price) * $productIdNumDic[$model->productId];
 }
 echo $priceSum;
+echo "</p>";
 ?>
 			</td>
 			<td width="20%">
