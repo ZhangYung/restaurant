@@ -30,7 +30,7 @@ $(document).ready(function()
 
 </head>
 
-<frameset rows="20%, 80%" frameBorder="0">	
+<frameset rows="20%, 80%" frameBorder="1">	
 		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0>
 <frameset cols="20%, 80%" frameBorder="0">
 		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 >
