@@ -12,12 +12,13 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	$('ul li').click(function(){
+	$("ul li").click(function(){
+		alert("alert");
 		var index = $(this).index();
 		$(this)
-        .addClass('active') // 给当前li加上.active
-        .siblings('li') // 选中同一级其他的li
-        .removeClass('active'); // 给同一级其他li去除.active
+        .addClass("selected")
+        .siblings("li") 
+        .removeClass("selected"); 
 	});
 </script>
 <title>水云居</title>
