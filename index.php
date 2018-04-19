@@ -41,7 +41,7 @@ $(document).ready(function()
 	<div id="menu" style="width:20%;float:left;height:90%;background-color: red">
 
 		<ul>
-			<li><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;height: 20%">美味快餐</a></li><br>
+			<li><a class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;height:200px">美味快餐</a></li><br>
 			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;height: 20%">火锅</a></li><br>
 			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;height: 20%">饮料</a></li><br>
 			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;height: 20%">其他</a></li><br>
