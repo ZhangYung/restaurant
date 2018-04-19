@@ -15,8 +15,7 @@
 $(document).ready(function()
   {
 	$("ul li").click(function(){
-		var index = $(this).index();
-		$("a").siblings(".selected").removeClass("selected");
+		$("a.selected").removeClass("selected");
 
 		$(this)
 		.children("a")
