@@ -14,20 +14,15 @@
 <script type="text/javascript">
 $(document).ready(function()
   {
-  $("button").click(function(){
-    $("#p1").css("color","red")
-      .slideUp(2000)
-      .slideDown(2000);
-  });
+	$("a").click(function(){
+		alert("alert");
+		var index = $(this).index();
+		$(this)
+        .addClass("selected")
+        .siblings("a") 
+        .removeClass("selected"); 
+	});
 });
-	// $("a").click(function(){
-	// 	alert("alert");
-	// 	var index = $(this).index();
-	// 	$(this)
- //        .addClass("selected")
- //        .siblings("a") 
- //        .removeClass("selected"); 
-	// });
 </script>
 <title>水云居</title>
 
@@ -45,9 +40,7 @@ $(document).ready(function()
 	</div>
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
-		
-<p id="p1">菜鸟教程!!</p>
-<button>点我</button>
+
 		<ul>
 			<li><a id="leftLink" class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a id="leftLink" href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
