@@ -36,29 +36,16 @@ $(document).ready(function()
 	checkAndCreateTable($meimeiShopOrderTable);
 	?>
 
-<div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;height:100%">
-	<!-- <div id="header" style="height: 60px; width: 100%;">
-		<h1 style="text-align:center">水云居</h1>
-	</div>
- -->
-	<div id="menu" style="width:20%;float:left;height:100%;">
-		<iframe src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 width="100%" height="100%" ></iframe>
-	</div>
 
-	<div id="content" style="width:80%;float:right;height:100%;">
-		<iframe src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0 width="100%" height="30%" ></iframe>
 
-		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="70%" scrolling="yes" ></iframe>
-	</div>
+<frameset rows="70%, 30%" cols="*" frameBorder="0">	
+<frameset cols="20%, 80%" frameBorder="0">
+		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft" frameborder=0 ></iframe>
+		<frame src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 scrolling="yes" ></iframe>
+</frameset>
+		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom" frameborder=0></iframe>
+</frameset>
 
-	<!-- <div id="content" style="width:80%;float:right;height:20%;">
-	 </div>-->
-
-	<!-- <div id="footer" style="text-align:center;height:10%;width:100%;float:left;">
-		Copyright ©2017-2018水云居
-	</div> -->
-
-</div>
 
 </body>
 </html>
