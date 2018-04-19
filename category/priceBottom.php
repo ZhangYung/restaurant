@@ -9,17 +9,6 @@
 	<title></title>
 </head>
 
-<script type="text/javascript">
-	function clickCreateOrder() {
-		parent.window.location.replace('createOrder.php');
-	}
-
-	// function myrefresh()  { 
-	// 	window.location.reload(); 
-	// } 
-	// setTimeout('myrefresh()',2000); //指定1秒刷新一次 
-</script>
-
 <body>
 	<table border="1" width="100%" height="100%">
 		<tr>
@@ -63,7 +52,7 @@ echo $priceSum;
 ?>
 			</td>
 			<td width="20%">
-			<button class="fullSelect" onclick="clickCreateOrder()">订单详情</button> 
+			<button class="fullSelect" onclick="javascript:parent.window.location.replace('createOrder.php');">订单详情</button> 
 			</td>
 		</tr>
 	</table>

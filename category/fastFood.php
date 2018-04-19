@@ -44,7 +44,7 @@ for ($i=0; $i < $count; $i++) {
 	$model->initWithDic($subProduct);
 	echo "<td >";
 	if ($model->imagePath != NULL) {
-		echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+		echo "<img type=\"width:80px; height:80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 	}
 	echo "</td>";
 
