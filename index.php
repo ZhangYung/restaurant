@@ -39,15 +39,15 @@ $(document).ready(function()
 	checkAndCreateTable($meimeiShopOrderTable);
 	?>
 
-<p id="p1">菜鸟教程!!</p>
-<button>点我</button>
-
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
 	<div id="header" style="height: 60px; width: 100%;">
 		<h1 style="text-align:center">水云居</h1>
 	</div>
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
+		
+<p id="p1">菜鸟教程!!</p>
+<button>点我</button>
 		<ul>
 			<li><a id="leftLink" class="selected" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a id="leftLink" href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
