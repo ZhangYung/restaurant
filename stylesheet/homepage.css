@@ -1,9 +1,4 @@
 
-.selected {
-    background-color: #4CAF50;
-    color: white;
-}
-
 #leftLink {
     display: block;
     color: #000;
@@ -11,6 +6,11 @@
     font-size: 40px;
     padding: 30px 16px;
     text-decoration: none;
+}
+
+.selected {
+    background-color: #4CAF50;
+    color: white;
 }
 
 ul {
