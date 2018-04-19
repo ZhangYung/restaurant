@@ -12,14 +12,22 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	$("a").click(function(){
-		alert("alert");
-		var index = $(this).index();
-		$(this)
-        .addClass("selected")
-        .siblings("a") 
-        .removeClass("selected"); 
-	});
+$(document).ready(function()
+  {
+  $("button").click(function(){
+    $("#p1").css("color","red")
+      .slideUp(2000)
+      .slideDown(2000);
+  });
+});
+	// $("a").click(function(){
+	// 	alert("alert");
+	// 	var index = $(this).index();
+	// 	$(this)
+ //        .addClass("selected")
+ //        .siblings("a") 
+ //        .removeClass("selected"); 
+	// });
 </script>
 <title>水云居</title>
 
@@ -30,6 +38,9 @@
 	require $databaseManagerphpPath;
 	checkAndCreateTable($meimeiShopOrderTable);
 	?>
+
+<p id="p1">菜鸟教程!!</p>
+<button>点我</button>
 
 <div id="container" style="width:100%;position:absolute;top:0px;bottom:0px;">
 	<div id="header" style="height: 60px; width: 100%;">
