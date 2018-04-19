@@ -11,6 +11,7 @@
 <META HTTP-EQUIV="pragma" CONTENT="no-cache">
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
 <title>水云居</title>
+
 </head>
 <body>
 	<?php 
@@ -25,13 +26,11 @@
 	</div>
 
 	<div id="menu" style="width:20%;float:left;height:90%;">
-		<ul>
-			<li><a href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li> <br>
-			<li><a href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
-			<li><a href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a></li><br>
-			<li><a href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a></li><br>
-			<li><a href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a></li><br>
-		</ul>
+			<a id="leftLink" href="category/fastFood.php?category=1" target="mainContent" style="text-decoration:none;" onclick="">美味快餐</a><br>
+			<a id="leftLink" href="category/fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a><br>
+			<a id="leftLink" href="category/fastFood.php?category=3" target="mainContent" style="text-decoration:none;">饮料</a><br>
+			<a id="leftLink" href="category/fastFood.php?category=4" target="mainContent" style="text-decoration:none;">其他</a><br>
+			<a id="leftLink" href="category/orderList.php" target="mainContent" style="text-decoration:none;">已下订单</a><br>
 		<!-- <button class="categorySelect" onclick="clickChooseProductFunction(1)">美味快餐</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(2)">火锅</button> <br><br>
 		<button class="categorySelect" onclick="clickChooseProductFunction(3)">饮料</button> <br><br>
@@ -54,6 +53,22 @@
 
 </body>
 </html>
+<script type="text/javascript">
+	var linkArray = document.getElementById('leftLink');
+	for (var i = 0; i < linkArray.length; i++) {
+		var link = linkArray[i];
+		link.onclick = function () {
+			for (var j = 0; j < linkArray.length; j++) {
+				var subLink = linkArray[j];
+				if (i == j) {
+					subLink.className = 'selected';
+				} else {
+					subLink.className = '';
+				}
+			}
+		}
+	}
+</script>
 
 
 
