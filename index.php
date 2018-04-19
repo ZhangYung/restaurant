@@ -56,7 +56,7 @@ $(document).ready(function()
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:70%;">
-		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="100%" height="100%" scrolling="yes" ></iframe>
+		<iframe src="category/fastFood.php?category=1" name="mainContent" id="mainContent" frameborder=0 width="200" height="200" scrolling="yes" ></iframe>
 	</div>
 
 	<div id="content" style="width:80%;float:right;height:20%;">
