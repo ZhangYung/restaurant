@@ -23,7 +23,7 @@
 			}
 
 			$ordersJson;
-			if ($currentState == 1 || $currentState == 2 $currentState == 3) {
+			if ($currentState == 1 || $currentState == 2 || $currentState == 3) {
 				$ordersJson = getOrdersASC(NULL, NULL, $currentState);
 			} else {
 				$ordersJson = getOrders(NULL, NULL, $currentState);
