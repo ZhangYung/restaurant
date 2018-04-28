@@ -114,13 +114,66 @@ if ($_GET["createOrder"] != NULL) {
 		$sqlProductNumberArray[$i] = $productIdNumDic[$model->productId];
 	}
 	date_default_timezone_set("Asia/Shanghai");
-	$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
-	if ($success) {
-		$_SESSION['purchaseProducts'] = NULL;
-		echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "')</script>";
-	} else {
-		echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); location.replace('../index.php');</script>";
+
+function checkProductsNumByIdsOfNum($productIdArray, $productIdNumDic)
+{
+	$productsJson = getProductsByIds($productIdArray);
+	$products = json_decode($productsJson, TRUE);
+
+	$count = count($products);
+	for ($i=0; $i < $count; $i++) {
+		$model = new shopProduct();
+		$subProduct = $products[$i];
+		$model->initWithDic($subProduct);
+
+		$useNumber = $productIdNumDic[$model->productId];
+		if ($model->number < $useNumber) {
+			return FAlSE;
+		}
 	}
+
+	return TRUE;
+}
+
+function desProductsNumByIdsOfNum($productIdArray, $productIdNumDic)
+{
+	$productsJson = getProductsByIds($productIdArray);
+	$products = json_decode($productsJson, TRUE);
+
+	$count = count($products);
+	for ($i=0; $i < $count; $i++) {
+		$model = new shopProduct();
+		$subProduct = $products[$i];
+		$model->initWithDic($subProduct);
+
+		$useNumber = $productIdNumDic[$model->productId];
+		$model->number = $model->number - $useNumber;
+		addOrEditProduct($model->productId, NULL, NULL, NULL, NULL, $model->number, NULL, NULL);
+	}
+}
+
+	$success = checkProductsNumByIdsOfNum($sqlProductIdArray, $productIdNumDic);
+	if ($success) {
+		$fp = fopen('../productInfoChange.lock', 'r');
+		var_dump($fp);
+		flock($fp, LOCK_EX);//加锁
+
+		desProductsNumByIdsOfNum($sqlProductIdArray, $productIdNumDic);
+		$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
+
+		flock($fp, LOCK_UN);//加锁
+
+		if ($success) {
+			$_SESSION['purchaseProducts'] = NULL;
+			echo "<script language=\"javascript\" > alert(\"下单成功\"); location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "')</script>";
+		} else {
+			echo "<script language=\"javascript\" >alert(\"下单失败，请联系店主手动下单\"); location.replace('../index.php');</script>";
+		}
+	} else {
+			echo "<script language=\"javascript\" >alert(\"下单失败，商品剩余数量不足\"); location.replace('../index.php');</script>";
+	}
+
+
 }
 
 ?>

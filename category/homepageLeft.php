@@ -19,7 +19,6 @@ $(document).ready(function()
 <body>
 	<?php 
 	$currentCategory = $_GET["selectedCategory"]; 
-	echo "currentCategory:" . $currentCategory;
 	 ?>
 		<ul>
 			<li ><a <?php if($currentCategory == 1) { echo " class=\"selected\" ";} ?> href="fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
