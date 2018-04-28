@@ -38,15 +38,15 @@
 				echo "<tr>";
 				// if ($showPage > 0) {
 					echo "<td>";
-					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage - 1 . "&state=" . $currentState . "')\">上一页</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . ($showPage - 1) . "&state=" . $currentState . "')\">上一页</button>";
 					echo "</td>";
 				// }
 				echo "<td>";
-				echo "当前页:" . $showPage + 1;
+				echo "当前页:" . ($showPage + 1);
 				echo "</td>";
 				// if ($count >= 20) {
 					echo "<td>";
-					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage + 1 . "&state=" . $currentState . "')\">上一页</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . ($showPage + 1) . "&state=" . $currentState . "')\">上一页</button>";
 					echo "</td>";
 				// }
 				echo "</tr>";
