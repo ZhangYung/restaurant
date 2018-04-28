@@ -34,22 +34,23 @@
 			}
 			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
-
+			if ($currentState != 1 && $currentState != 2 && $currentState != 3) {
 				echo "<tr>";
-				echo "<td>";
 				if ($showPage > 0) {
+					echo "<td>";
 					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage - 1 . "&state=" . $currentState . "')\">上一页</button>";
+					echo "</td>";
 				}
-				echo "</td>";
 				echo "<td>";
-				echo $showPage + 1;
+				echo "当前页" . $showPage + 1;
 				echo "</td>";
-				echo "<td>";
-				if ($count >= 20 && $currentState != 1 && $currentState != 2 && $currentState != 3) {
+				if ($count >= 20) {
+					echo "<td>";
 					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage + 1 . "&state=" . $currentState . "')\">上一页</button>";
+					echo "</td>";
 				}
-				echo "</td>";
 				echo "</tr>";
+			}
 
 			for ($i=0; $i < $count; $i++) { 
 				$model = new shopOrder();
