@@ -9,13 +9,13 @@
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 
-			echo "<table class=\"table\">";
+			echo "<table width=\"100%\" height=\"100%\">";
 			$currentState = $_GET["state"];
 			$changeState = $_GET["changeState"];
 			$changeOrderid = $_GET["orderId"];
 
 			$_SESSION['categoryShow'] = $currentState;
-			
+
 			if ($changeOrderid != NULL) {
 				addOrEditOrder($changeOrderid, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $changeState);
 			}
@@ -25,7 +25,7 @@
 			$count = count($orders);
 			for ($i=0; $i < $count; $i++) { 
 				echo "<tr>";
-				echo "<td>";
+				echo "<td style=\"width:40%;min-height:140px\">";
 				$model = new shopOrder();
 				$subOrder = $orders[$i];
 				$model->initWithDic($subOrder);
@@ -39,12 +39,12 @@
 				}
 				echo "</td>";
 
-				echo "<td>";
+				echo "<td style=\"width:40%;min-height:140px\">";
 				date_default_timezone_set("Asia/Shanghai");
 				echo $model->tableNum . "号" . $model->seatNum . "座" . "<br>创建时间：" . date("Y/m/d H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 				echo "</td>";
 
-				echo "<td>";
+				echo "<td style=\"width:20%;min-height:140px\">";
 				if ($currentState == 1) {
 					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
 				} elseif ($currentState == 2) {
