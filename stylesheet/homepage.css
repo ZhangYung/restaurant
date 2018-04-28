@@ -65,7 +65,7 @@ button.elementButton {
 
 button.elementOperaButton {
     display: block;
-    width: 150px;
+    width: 160px;
     height: 40px;
     color: #fff;
     text-align: center;
@@ -75,6 +75,7 @@ button.elementOperaButton {
     cursor: pointer;
     outline: none;
     border-radius: 4px;
+    font: normal 20px / 40px '微软雅黑';
 }
 
 button.elementGrayButton {
@@ -93,7 +94,7 @@ button.elementGrayButton {
 
 button.elementGrayBigButton {
     display: block;
-    width: 150px;
+    width: 160px;
     height: 40px;
     color: #fff;
     background: #aaaaaa;
