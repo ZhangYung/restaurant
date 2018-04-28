@@ -9,7 +9,6 @@
 		$_SESSION['categoryShow'] = "1";
 	}
 
-	echo "categoryShow" . $_SESSION['categoryShow'];
 ?>
 
 <!DOCTYPE html>
