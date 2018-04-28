@@ -16,8 +16,9 @@
 	</form>
 	<br>
 
-	<table class="table">
 		<?php
+			echo "<table width=\"100%\" height=\"100%\">";
+
 			require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
 			require $databaseManagerphpPath;
 			$productsJson = getProducts(NULL, $currentCategory, NULL);
@@ -29,13 +30,13 @@
 				$model = new shopProduct();
 				$subProduct = $products[$i];
 				$model->initWithDic($subProduct);
-				echo "<td >";
+				echo "<td style=\"width:30%;min-height:140px\" >";
 				if ($model->imagePath != NULL) {
 					echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				}
 				echo "</td>";
 
-				echo "<td>";
+				echo "<td style=\"width:50%;min-height:140px\">";
 				echo "<br>";
 				echo "" . $model->name . "<br>";
 				echo "" . $model->detail . "<br>";
@@ -43,17 +44,17 @@
 				echo "状态：" . (($model->state == 1) ? "正常售卖" : "已停售") . "<br>";
 				echo "</td>";
 
-				echo "<td>";
+				echo "<td style=\"width:20%;min-height:140px\">";
 				echo "<form action=\"managerAddProduct.php\" method=\"get\" id=\"form" . $i . "\">";
 				echo "<input type=\"hidden\" name=\"addType\" value=\"" . $currentCategory . "\">";
 				echo "<input type=\"hidden\" name=\"changeProductId\" value=\"" . $model->productId . "\">";
-				echo "<input class=\"elementButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
+				echo "<input class=\"elementGrayButton\" type=\"submit\" name=\"submit\" value=\"编辑\">";
 				echo "</form>";
 				echo "</td>";
 
 				echo " </tr>";
 			}
+			echo "</table>";
 		  ?>
-	</table>
 </body>
 </html>

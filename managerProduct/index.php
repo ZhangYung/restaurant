@@ -14,7 +14,7 @@
 </head>
 
 <frameset cols="20%, *" frameBorder="1">
-	<frame name="selectContent" <?php echo "src=\"category/managerHomePageLeft.php?category=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
+	<frame name="selectContent" <?php echo "src=\"category/managerHomePageLeft.php?selectedCategory=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
 	<frame name="mainContent" <?php echo "src=\"category/managerFastFood.php?category=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
 </frameset>
 
