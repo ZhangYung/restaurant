@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if ($_SESSION['categoryShow'] == NULL) {
+		$_SESSION['categoryShow'] = "1";
+	}
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +14,8 @@
 </head>
 
 <frameset cols="20%, *" frameBorder="1">
-	<frame name="selectContent" src="category/managerHomePageLeft.php"></frame>
-	<frame name="mainContent" src="category/managerFastFood.php?category=1"></frame>
+	<frame name="selectContent" <?php echo "src=\"category/managerHomePageLeft.php?category=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
+	<frame name="mainContent" <?php echo "src=\"category/managerFastFood.php?category=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
 </frameset>
 
 </html>

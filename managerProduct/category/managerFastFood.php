@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../stylesheet/managerHomepage.css"> -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/homepage.css"/>
 	<title></title>
 </head>
 <body>
 		<?php
 			$currentCategory = $_GET["category"];
+			$_SESSION['categoryShow'] = $currentCategory;
 		?>
 	<br>
 	<form action="managerAddProduct.php" method="get">

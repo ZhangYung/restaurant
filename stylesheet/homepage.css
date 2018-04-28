@@ -77,6 +77,20 @@ button.elementGrayButton {
     font: normal 30px / 40px '微软雅黑';
 }
 
+button.elementGrayBigButton {
+    display: block;
+    width: 150px;
+    color: #fff;
+    background: #aaaaaa;
+    cursor: pointer;
+    outline: none;
+    margin: 10px 0px;
+    border: 0px;
+    border-radius: 4px;
+    text-align: center;
+    font: normal 30px / 40px '微软雅黑';
+}
+
 input.elementButton {
     color: #fff;
     width: 100px;

@@ -3,6 +3,7 @@
 	$_SESSION['eatTableNum'] = isset($_GET["tableNum"]) ? $_GET["tableNum"] : -1;
 	$_SESSION['eatSeatNum'] = isset($_GET["seatNum"]) ? $_GET["seatNum"] : -1;
 	if ($_GET["action"] == "clearProduct") {
+		//提交订单后，清理缓存下的订单
 		$_SESSION['purchaseProducts'] = "";
 	}
 	if ($_SESSION['categoryShow'] == NULL) {

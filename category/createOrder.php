@@ -71,8 +71,8 @@ for ($i=0; $i < $count; $i++) {
 	echo "数量：x " . $productIdNumDic[$model->productId] . "<br>";
 	echo "</td>";
 
-	echo "<td>";
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">删除一份</button> <br><br>";
+	echo "<td width=\"150\">";
+	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">删除一份</button> <br><br>";
 	echo "</td>";
 
 	echo " </tr>";
