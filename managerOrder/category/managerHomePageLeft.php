@@ -26,6 +26,7 @@ $(document).ready(function()
 	<li><a  <?php if($currentCategory == 2) { echo " class=\"selected\" ";} ?>  href="managerOrderList.php?state=2" target="mainContent"> 待上菜 </a></li><br>
 	<li><a  <?php if($currentCategory == 3) { echo " class=\"selected\" ";} ?>  href="managerOrderList.php?state=3" target="mainContent"> 待付款 </a></li><br>
 	<li><a  <?php if($currentCategory == 4) { echo " class=\"selected\" ";} ?>  href="managerOrderList.php?state=4" target="mainContent"> 已付款 </a></li><br>
+	<li><a  <?php if($currentCategory == 5) { echo " class=\"selected\" ";} ?>  href="managerOrderList.php?state=5" target="mainContent"> 已拒绝 </a></li><br>
 	</ul>
 </body>
 </html>
