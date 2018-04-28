@@ -16,7 +16,7 @@
 
 <frameset cols="20%, 80%" frameBorder="1">
 	<frame name="selectContent"  <?php echo "src=\"category/managerHomePageLeft.php?selectedCategory=" . $_SESSION['stateShow'] . "\"" ?> ></frame>
-	<frame name="mainContent" <?php echo "src=\"category/managerOrderList.php?state=" . $_SESSION['stateShow'] . "\"" ?> > </frame>
+	<frame name="mainContent" <?php echo "src=\"category/managerOrderList.php?page=0&state=" . $_SESSION['stateShow'] . "\"" ?> > </frame>
 </frameset>
 
 </html>

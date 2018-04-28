@@ -15,6 +15,10 @@
 			$currentState = $_GET["state"];
 			$changeState = $_GET["changeState"];
 			$changeOrderid = $_GET["orderId"];
+			$showPage = $_GET["page"];
+			if ($showPage == NULL) 
+				$showPage = 0;
+
 
 			$_SESSION['stateShow'] = $currentState;
 
@@ -26,23 +30,41 @@
 			if ($currentState == 1 || $currentState == 2 || $currentState == 3) {
 				$ordersJson = getOrdersASC(NULL, NULL, $currentState);
 			} else {
-				$ordersJson = getOrders(NULL, NULL, $currentState);
+				$ordersJson = getOrders(NULL, NULL, $currentState, $showPage);
 			}
 			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
+
+				echo "<tr>";
+				echo "<td>";
+				if ($showPage > 0) {
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage - 1 . "&state=" . $currentState . "')\">上一页</button>";
+				}
+				echo "</td>";
+				echo "<td>";
+				echo $showPage + 1;
+				echo "</td>";
+				echo "<td>";
+				if ($count >= 20 && $currentState != 1 && $currentState != 2 && $currentState != 3) {
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage + 1 . "&state=" . $currentState . "')\">上一页</button>";
+				}
+				echo "</td>";
+				echo "</tr>";
+
 			for ($i=0; $i < $count; $i++) { 
 				$model = new shopOrder();
 				$subOrder = $orders[$i];
 				$model->initWithDic($subOrder);
-
 				echo "<tr>";
 				echo "<td style=\"width:25%;min-height:140px\">";
 				echo "<br>";
 				if ($currentState == 1) {
-					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=5" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">拒绝此订单</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=5" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">拒绝此订单</button>";
 				} elseif ($currentState == 2) {
-					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完已收款</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完已收款</button>";
 				} elseif ($currentState == 3) {
+				} elseif ($currentState == 5) {
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=10" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">删除</button>";
 				}
 
 				echo "</br>";
@@ -70,15 +92,15 @@
 				echo "<td style=\"width:25%;min-height:140px\">";
 				echo "<br>";
 				if ($currentState == 1) {
-					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
 				} elseif ($currentState == 2) {
-					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
 				} elseif ($currentState == 3) {
-					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">已收款</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">已收款</button>";
 				} elseif ($currentState == 4) {
-					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=10" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">删除</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=10" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">删除</button>";
 				} elseif ($currentState == 5) {
-					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">恢复此订单</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . $showPage . "&changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">恢复此订单</button>";
 				}
 				echo "<br>";
 				echo "</td>";
