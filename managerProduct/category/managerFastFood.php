@@ -32,7 +32,7 @@
 				$model->initWithDic($subProduct);
 				echo "<td style=\"width:30%;min-height:140px\" >";
 				if ($model->imagePath != NULL) {
-					echo "<img width=\"80px\" height=\"80px\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
+					echo "<img style=\"width:140px; height:140px; vertical-align:middle;\" src=" . $webHttpAddress . $model->imagePath . " "  . "/>";
 				}
 				echo "</td>";
 
