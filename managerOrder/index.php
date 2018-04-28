@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	if ($_SESSION['categoryShow'] == NULL) {
-		$_SESSION['categoryShow'] = "1";
+	if ($_SESSION['stateShow'] == NULL) {
+		$_SESSION['stateShow'] = "1";
 	}
  ?>
 
@@ -14,9 +14,9 @@
 <title>后台管理</title>
 </head>
 
-<frameset cols="20%, *" frameBorder="1">
-	<frame name="selectContent"  <?php echo "src=\"category/managerHomePageLeft.php?selectedCategory=" . $_SESSION['categoryShow'] . "\"" ?> ></frame>
-	<frame name="mainContent" src="category/managerOrderList.php?state=1"></frame>
+<frameset cols="20%, 80%" frameBorder="1">
+	<frame name="selectContent"  <?php echo "src=\"category/managerHomePageLeft.php?selectedCategory=" . $_SESSION['stateShow'] . "\"" ?> ></frame>
+	<frame name="mainContent" <?php echo "src=\"category/managerOrderList.php?state=" . $_SESSION['stateShow'] . "\"" ?> > </frame>
 </frameset>
 
 </html>
