@@ -72,7 +72,7 @@ for ($i=0; $i < $count; $i++) {
 	echo "</td>";
 
 	echo "<td width=\"150\">";
-	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">删除一份</button> <br><br>";
+	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('createOrder.php?deleteProductId=" . $model->productId . "');\">删除一份</button>";
 	echo "</td>";
 
 	echo " </tr>";
@@ -82,14 +82,14 @@ echo "</table>";
 	echo "<br>";
 	// echo "<form method=\"post\" id=\"form1\">";
 	// echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
-	echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('createOrder.php?createOrder=createOrder')\">下单</button>";
+	echo "<button class=\"submitButton\" onclick=\"javascript:location.replace('createOrder.php?createOrder=createOrder')\">下单</button>";
 	// echo "</form>";
 	echo "<br>";
 	echo "<br>";
 
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">返回再选选</button> <br><br>";
+	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">返回再选</button> <br><br>";
 
-	echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('../index.php?action=clearProduct&seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">全部清空</button> <br><br>";
+	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('../index.php?action=clearProduct&seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">全部清空</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
 	echo "</tr><br>";
 
