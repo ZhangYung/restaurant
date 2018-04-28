@@ -5,7 +5,7 @@
 	if ($_GET["action"] == "clearProduct") {
 		$_SESSION['purchaseProducts'] = "";
 	}
-	if (isset($_SESSION['categoryShow']) == FALSE) {
+	if ($_SESSION['categoryShow'] == NULL) {
 		$_SESSION['categoryShow'] = "1";
 	}
 ?>

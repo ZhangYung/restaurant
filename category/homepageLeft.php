@@ -17,6 +17,7 @@ $(document).ready(function()
 </script>
 </head>
 <body>
+	<?php echo $_SESSION['categoryShow']; ?>
 		<ul>
 			<li ><a <?php if($_SESSION['categoryShow'] == "1") { echo " class=\"selected\" ";} ?> href="fastFood.php?category=1" target="mainContent" style="text-decoration:none;">美味快餐</a></li><br>
 			<li><a <?php if($_SESSION['categoryShow'] == "2") { echo " class=\"selected\" ";} ?> href="fastFood.php?category=2" target="mainContent" style="text-decoration:none;">火锅</a></li><br>
