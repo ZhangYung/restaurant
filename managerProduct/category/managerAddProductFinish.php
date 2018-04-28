@@ -81,7 +81,17 @@
 		$productCategory = "其他";
 	}
  ?>
-	<p>添加 <?php echo $productCategory; ?> 成功</p>
+	<p>
+	 <?php 
+	 	if ($changeProductId) {
+	 		echo "修改";
+		} else {
+			echo "添加";
+		}
+	 	echo $productCategory;
+	 	echo $titleName;
+	 ?>
+	   成功</p>
 	<br>
 	<br>
 	<form action=<?php echo $finishPage ?> method="get">
