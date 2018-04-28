@@ -11,8 +11,8 @@
 
 <body>
 	<table border="1" width="100%" height="100%">
-		<tr height="100%">
-			<td width="80%">
+		<tr width="100%" height="100%">
+			<td width="80%" height="100%">
 				
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/restaurantConfig/config.php";
@@ -53,7 +53,7 @@ echo $priceSum;
 echo "</p>";
 ?>
 			</td>
-			<td width="20%">
+			<td width="20%" height="100%">
 			<button class="fullSelect" onclick="javascript:parent.window.location.replace('createOrder.php');">订单详情</button> 
 			</td>
 		</tr>
