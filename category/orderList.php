@@ -18,7 +18,7 @@
 	require $databaseManagerphpPath;
 	$tableNum = $_SESSION['eatTableNum'];
 	$seatNum = $_SESSION['eatSeatNum'];
-	$ordersJson = customGetOrders(NULL, $tableNum, $state);
+	$ordersJson = customGetOrders(NULL, $tableNum, $seatNum);
 
 	$orders = json_decode($ordersJson, TRUE);
 	$count = count($orders);
