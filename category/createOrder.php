@@ -80,6 +80,9 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
+	echo "<br>";
+	echo "<br>";
+	echo "<br>";
 	echo "餐品仅供下单，实物以店铺是否有存货为准，如有不便，敬请谅解。";
 	// echo "<form method=\"post\" id=\"form1\">";
 	// echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
@@ -87,8 +90,12 @@ echo "</table>";
 	// echo "</form>";
 	echo "<br>";
 	echo "<br>";
+	echo "<br>";
+	echo "<br>";
+	echo "<br>";
+	echo "<br>";
 
-	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">返回再选</button> <br><br>";
+	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('../index.php?seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">返回再选</button> <br><br> <br><br>";
 
 	echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('../index.php?action=clearProduct&seatNum=" . $_SESSION['eatSeatNum'] . "&tableNum=" . $_SESSION['eatTableNum'] . "');\">全部清空</button> <br><br>";
 	// echo "<input class=\"elementGrayButton\" name=\"submit\" onclick=\"javascript:history.back(1);\" value=\"返回再选选\">";
