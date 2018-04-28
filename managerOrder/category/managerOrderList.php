@@ -46,7 +46,7 @@
 				echo "</td>";
 				// if ($count >= 20) {
 					echo "<td>";
-					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . ($showPage + 1) . "&state=" . $currentState . "')\">上一页</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?page=" . ($showPage + 1) . "&state=" . $currentState . "')\">下一页</button>";
 					echo "</td>";
 				// }
 				echo "</tr>";
