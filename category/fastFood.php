@@ -16,7 +16,7 @@ $currentCategory = $_GET["category"];
 if ($currentCategory == NULL) {
 	$currentCategory = 1;
 }
-$_SESSION['categoryShow'] = $currentCategory;
+$_SESSION['categoryShow'] = strval($currentCategory);
 
 $addProductId = $_GET["addProductId"];
 if ($addProductId != NULL) {

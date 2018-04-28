@@ -25,7 +25,7 @@
 		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom">
 <frameset cols="20%, 80%" frameBorder="1">
 		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft">
-		<frame src="category/fastFood.php?category=<?php echo $_SESSION['categoryShow']; ?>" name="mainContent" id="mainContent">
+		<frame <?php echo "src=\"category/fastFood.php?category=" . $_SESSION['categoryShow'] . "\"";?> name="mainContent" id="mainContent">
 </frameset>
 </frameset>
 
