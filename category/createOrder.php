@@ -80,6 +80,7 @@ for ($i=0; $i < $count; $i++) {
 echo "</table>";
 
 	echo "<br>";
+	echo "餐品仅供下单，实物以店铺是否有存货为准，如有不便，敬请谅解。";
 	// echo "<form method=\"post\" id=\"form1\">";
 	// echo "<input type=\"hidden\" name=\"createOrder\" value=\"" . "createOrder" . "\">";
 	echo "<button class=\"submitButton\" onclick=\"javascript:location.replace('createOrder.php?createOrder=createOrder')\">下单</button>";
