@@ -22,9 +22,9 @@
 </head>
 
 <frameset rows="10%, 90%" frameBorder="1">	
-		<frame <?php echo "src=\"category/priceBottom.php?selectedCategory=" . $_SESSION['categoryShow'] . "\"";?>  name="priceBottom" id="priceBottom">
+		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom">
 <frameset cols="20%, 80%" frameBorder="1">
-		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft">
+		<frame <?php echo "src=\"category/homepageLeft.php?selectedCategory=" . $_SESSION['categoryShow'] . "\"";?> name="homepageLeft" id="homepageLeft">
 		<frame <?php echo "src=\"category/fastFood.php?category=" . $_SESSION['categoryShow'] . "\"";?> name="mainContent" id="mainContent">
 </frameset>
 </frameset>
