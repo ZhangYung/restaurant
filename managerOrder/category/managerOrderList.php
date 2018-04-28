@@ -31,8 +31,12 @@
 			$orders = json_decode($ordersJson, TRUE);
 			$count = count($orders);
 			for ($i=0; $i < $count; $i++) { 
+				$model = new shopOrder();
+				$subOrder = $orders[$i];
+				$model->initWithDic($subOrder);
+
 				echo "<tr>";
-				echo "<td style=\"width:20%;min-height:140px\">";
+				echo "<td style=\"width:25%;min-height:140px\">";
 				echo "<br>";
 				if ($currentState == 1) {
 					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=5" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">拒绝此订单</button>";
@@ -46,10 +50,6 @@
 
 				echo "<td style=\"width:25%;min-height:140px\">";
 				echo "<br>";
-				$model = new shopOrder();
-				$subOrder = $orders[$i];
-				$model->initWithDic($subOrder);
-
 				$productNameArray = explode(",", $model->productNames);
 				$productPriceArray = explode(",", $model->productPrices);
 				$productNumbersArray = explode(",", $model->productNumbers);
@@ -67,7 +67,7 @@
 				echo "<br>";
 				echo "</td>";
 
-				echo "<td style=\"width:30%;min-height:140px\">";
+				echo "<td style=\"width:25%;min-height:140px\">";
 				echo "<br>";
 				if ($currentState == 1) {
 					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
