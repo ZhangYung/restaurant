@@ -8,6 +8,8 @@
 	if ($_SESSION['categoryShow'] == NULL) {
 		$_SESSION['categoryShow'] = "1";
 	}
+
+	echo "categoryShow" . $_SESSION['categoryShow'];
 ?>
 
 <!DOCTYPE html>
