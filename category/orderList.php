@@ -49,7 +49,7 @@
 	}
 
 	echo "<tr>";
-	echo "<td colspan="2">";
+	echo "<td colspan=\"2\">";
 	echo $tableNum . " 号" . "总价¥：" . $priceSum;
 	echo "</td>";
 	echo "</tr>";
