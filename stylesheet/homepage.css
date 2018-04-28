@@ -63,6 +63,20 @@ button.elementButton {
     border-radius: 4px;
 }
 
+button.elementOperaButton {
+    display: block;
+    width: 150px;
+    font: normal 50px / 60px '微软雅黑';
+    color: #fff;
+    text-align: center;
+    margin: 10px 0px;
+    border: 0px;
+    background: #ff6161;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+}
+
 button.elementGrayButton {
     display: block;
     width: 100px;

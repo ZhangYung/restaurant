@@ -48,13 +48,13 @@
 
 				echo "<td style=\"width:30%;min-height:140px\">";
 				if ($currentState == 1) {
-					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=2" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">接受此订单</button>";
 				} elseif ($currentState == 2) {
-					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=3" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕</button><br><br>";
 
-					echo "<button class=\"elementGrayButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
+					echo "<button class=\"elementGrayBigButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">上菜完毕并已收款</button>";
 				} elseif ($currentState == 3) {
-					echo "<button class=\"elementButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">完成收款</button>";
+					echo "<button class=\"elementOperaButton\" onclick=\"javascript:location.replace('managerOrderList.php?changeState=4" . "&state=" . $currentState. "&orderId=" . $model->orderId . "')\">完成收款</button>";
 				}
 				echo "</td>";
 
