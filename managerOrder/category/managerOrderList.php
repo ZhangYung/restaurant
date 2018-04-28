@@ -13,6 +13,9 @@
 			$currentState = $_GET["state"];
 			$changeState = $_GET["changeState"];
 			$changeOrderid = $_GET["orderId"];
+
+			$_SESSION['categoryShow'] = $currentState;
+			
 			if ($changeOrderid != NULL) {
 				addOrEditOrder($changeOrderid, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $changeState);
 			}

@@ -68,7 +68,14 @@
 
 	// 1:快餐fastFood 2:火锅hotPot 3:饮料drinks 4:其他others
 	if ($isAvaliableProduct) {
+		$fp = fopen('../../productInfoChange.lock', 'r');
+		var_dump($fp);
+		flock($fp, LOCK_EX);//加锁
+
 		addOrEditProduct($changeProductId, $titleName, $price, $imagePath, $detail, $number, $addType, $status);
+
+		flock($fp, LOCK_UN);//解锁
+		fclose($fp);
 	}
 
 	$productCategory = "快餐";

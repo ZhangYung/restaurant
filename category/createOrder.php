@@ -170,6 +170,7 @@ function desProductsNumByIdsOfNum($productIdArray, $productIdNumDic)
 		$success = addOrEditOrder(NULL, $_SESSION['eatTableNum'], $_SESSION['eatSeatNum'], intval(time()), $priceSum, implode(",", $sqlProductIdArray), implode(",", $sqlProductNameArray), implode(",", $sqlProductPriceArray), implode(",", $sqlProductNumberArray), 1);
 
 		flock($fp, LOCK_UN);//解锁
+		fclose($fp);
 
 		if ($success) {
 			$_SESSION['purchaseProducts'] = NULL;
