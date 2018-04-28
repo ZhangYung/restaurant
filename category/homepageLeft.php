@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../stylesheet/homepage.css"/>
-<script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../stylesheet/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function()
   {
