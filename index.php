@@ -13,19 +13,6 @@
 <meta charset="utf-8">
 <META HTTP-EQUIV="pragma" CONTENT="no-cache">
 <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"/>
-<script type="text/javascript" src="stylesheet/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function()
-  {
-	$("ul li").click(function(){
-		$("a.selected").removeClass("selected");
-
-		$(this)
-		.children("a")
-        .addClass("selected");
-	});
-});
-</script>
 <title>水云居</title>
 
 </head>
