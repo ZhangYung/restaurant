@@ -84,11 +84,11 @@
 	<p>
 	 <?php 
 	 	if ($changeProductId) {
-	 		echo "修改";
+	 		echo "修改 ";
 		} else {
-			echo "添加";
+			echo "添加 ";
 		}
-	 	echo $productCategory;
+	 	echo $productCategory . " ";
 	 	echo $titleName;
 	 ?>
 	   成功</p>
