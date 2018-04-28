@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['categoryShow'] = "5";
 	// $_SESSION['purchaseProducts']=array();
 ?>
 

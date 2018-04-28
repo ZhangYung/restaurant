@@ -5,6 +5,9 @@
 	if ($_GET["action"] == "clearProduct") {
 		$_SESSION['purchaseProducts'] = "";
 	}
+	if (isset($_SESSION['categoryShow']) == FALSE) {
+		$_SESSION['categoryShow'] = "1";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +24,7 @@
 		<frame src="category/priceBottom.php" name="priceBottom" id="priceBottom">
 <frameset cols="20%, 80%" frameBorder="1">
 		<frame src="category/homepageLeft.php" name="homepageLeft" id="homepageLeft">
-		<frame src="category/fastFood.php?category=1" name="mainContent" id="mainContent">
+		<frame src="category/fastFood.php?category=<?php echo $_SESSION['categoryShow']; ?>" name="mainContent" id="mainContent">
 </frameset>
 </frameset>
 
