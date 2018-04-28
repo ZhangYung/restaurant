@@ -31,7 +31,8 @@
 		$model->initWithDic($subOrder);
 
 	echo "<tr>";
-	echo "<td width=\"80%\">";
+	echo "<td width=\"70%\">";
+	echo "<br>";
 	$productNameArray = explode(",", $model->productNames);
 	$productPriceArray = explode(",", $model->productPrices);
 	$productNumbersArray = explode(",", $model->productNumbers);
@@ -39,8 +40,9 @@
 	for ($j=0; $j < $productCount; $j++) { 
 		echo $productNameArray[$j] . " (" . $productPriceArray[$j] . ") " . "x ¥" . $productNumbersArray[$j] . "<br>";
 	}
+	echo "<br>";
 	echo "</td>";
-	echo "<td width=\"20%\">";
+	echo "<td width=\"30%\">";
 	date_default_timezone_set("Asia/Shanghai");
 	echo $tableNum . "号" . $seatNum . "座" . "<br>创建时间：" . date("H:i",$model->createData) . "<br>总价¥：" . $model->totalPrice;
 	$priceSum = $priceSum + $model->totalPrice;
